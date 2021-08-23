@@ -11,6 +11,9 @@ TagManager:
   - Poison
   - Antidote
   - Ice
+  - Electricity
+  - Water
+  - Fire
   layers:
   - Default
   - TransparentFX
