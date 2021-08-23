@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     public bool goright = true;
     public bool goup = true;
     public bool godown = true;
+
+    //Tiledetect related
+    public bool sliding;
+
     void Start()
     {
         movePoint.parent = null;
@@ -33,7 +37,8 @@ public class PlayerMovement : MonoBehaviour
             if(tilesUpdated == false)
             {
                 tileDetect.UpdateTiles();
-                tilesUpdated = true;
+                if(!sliding) //when over ice, the tiles keep updating until the ice sliding is over
+                    tilesUpdated = true;
             }
 
             //Horizontal input
@@ -69,7 +74,5 @@ public class PlayerMovement : MonoBehaviour
     public void MoveDir(Vector3 dir)
     {
         movePoint.position += dir;
-        tilesUpdated = false;
-        tileDetect.UpdateWhenInput();
     }
 }

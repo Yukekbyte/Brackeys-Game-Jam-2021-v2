@@ -81,7 +81,9 @@ public class TileDetect : MonoBehaviour
         if(currentTile.CompareTag("Ice"))
         {
             mov.MoveDir(currentTile.transform.position - prevTile.transform.position);
+            mov.sliding = true; //this bool makes sure that the tiles keep updating when sliding over ice
         }
+        else mov.sliding = false;
     }
 
     public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
