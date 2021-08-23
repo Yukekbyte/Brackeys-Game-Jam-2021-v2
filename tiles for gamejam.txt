@@ -1,0 +1,19 @@
+Tiles
+
+grass: nothing
+weapons: defeating enemy, tiles
+enemy: dies when step on (not when weapons)
+ice: slide further (cold/frost effect?)
+poison: poison debuff (dies after 3 tiles)
+antidote: defeats poison
+water: wet debuff
+cannon: use when gunpowder
+gunpowder: explode when campfire
+campfire: 
+electricity: electricity buff
+
+
+optional:
+
+monkey
+nuclear waste
