@@ -9,7 +9,7 @@ antidote: defeats poison
 water: wet debuff
 cannon: use when gunpowder
 gunpowder: explode when campfire
-campfire: 
+campfire: dries you up and warms you
 electricity: electricity buff
 
 
