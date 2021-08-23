@@ -41,11 +41,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(-1f, 0f, 0f);
                 tilesUpdated = false;
+                tileDetect.UpdateWhenInput();
             }
             else if(Input.GetKeyDown(KeyCode.D) && goright)
             {
                 movePoint.position += new Vector3(1f, 0f, 0f);
                 tilesUpdated = false;
+                tileDetect.UpdateWhenInput();
             }
 
             //Vertical input
@@ -53,11 +55,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(0f, 1f, 0f);
                 tilesUpdated = false;
+                tileDetect.UpdateWhenInput();
             }
             else if(Input.GetKeyDown(KeyCode.S) && godown)
             {
                 movePoint.position += new Vector3(0f, -1f, 0f);
                 tilesUpdated = false;
+                tileDetect.UpdateWhenInput();
             }
         }
     }

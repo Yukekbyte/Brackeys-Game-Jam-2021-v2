@@ -15,10 +15,11 @@ public class TileDetect : MonoBehaviour
 
     //specific tile related variables
     bool poisoned;
-    int poisonCount;
+    int poisonCount = 1;
+    bool weapons;
 
-    //This fuction should get called every time the player ARRIVES at a new tile
-    public void UpdateTiles()
+
+    public void UpdateTiles() //This fuction gets called the frame the player ARRIVES at a new tile
     {
         //Reset movement restrictions
         mov.goleft = true;
@@ -51,7 +52,7 @@ public class TileDetect : MonoBehaviour
 
 
         //Enemy Tile
-        if(currentTile.CompareTag("Enemy") && !prevTile.CompareTag("Weapons"))
+        if(currentTile.CompareTag("Enemy") && !weapons)
         {
             print("dead by enemy");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -63,29 +64,32 @@ public class TileDetect : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
+        //INSERT LOGIC OF ALL THE FOLLOWING TILES
+    }
+
+    public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
+    {
+        //Antidote Tile
+        if(currentTile.CompareTag("Antidote"))
+        {
+            poisoned = false;
+        }
+
         //Poison Tile
         if(poisoned)
         {
             poisonCount -= 1;
             print(poisonCount);
         }
-        if(currentTile.CompareTag("Poison"))
+        if(currentTile.CompareTag("Poison") && !poisoned)
         {
             poisoned = true;
             poisonCount = 3; // amount of tiles you can travel before dying
         }
-        if(poisonCount < 0)
+        if(poisonCount <= 0)
         {
             print("dead by poison");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-
-        //Antidote Tile
-        if(currentTile.CompareTag("Antidote"))
-        {
-            poisoned = false;
-        }
-        
-        //INSERT LOGIC OF ALL THE FOLLOWING TILES
     }
 }
