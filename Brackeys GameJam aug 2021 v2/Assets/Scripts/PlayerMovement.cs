@@ -65,4 +65,9 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    public void MoveDir(Vector3 dir)
+    {
+        movePoint.position += dir;
+    }
 }

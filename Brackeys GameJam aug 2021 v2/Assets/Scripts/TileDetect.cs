@@ -36,8 +36,10 @@ public class TileDetect : MonoBehaviour
         Collider[] downTileArray = Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z - 1f), 0.1f); // Down cube
 
         //if there is a tile in the spot, store it in an object
-
-        currentTile = currentTileArray[0];
+        if(currentTileArray.Length > 0)
+            currentTile = currentTileArray[0];
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if (leftTileArray.Length > 0)
             leftTile = leftTileArray[0];
         if (rightTileArray.Length > 0)
@@ -46,6 +48,7 @@ public class TileDetect : MonoBehaviour
             upTile = upTileArray[0];
         if (downTileArray.Length > 0)
             downTile = downTileArray[0];
+        print("prev: " + prevTile.tag + "   cur: " + currentTile.tag);
 
         //Check the edges and restrict movement if needed
         if(leftTileArray.Length == 0)
@@ -75,7 +78,11 @@ public class TileDetect : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        //INSERT LOGIC OF ALL THE FOLLOWING TILES
+        //Ice Tile
+        if(currentTile.CompareTag("Ice"))
+        {
+            mov.MoveDir(currentTile.transform.position - prevTile.transform.position);
+        }
     }
 
     public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
