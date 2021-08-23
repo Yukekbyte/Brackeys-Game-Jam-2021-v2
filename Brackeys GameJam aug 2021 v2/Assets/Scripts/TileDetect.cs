@@ -12,11 +12,10 @@ public class TileDetect : MonoBehaviour
     Collider downTile;
     Collider prevTile;
     public PlayerMovement mov;
+    public EffectsAndItems effectsAndItems;
 
     //specific tile related variables
-    bool poisoned;
-    int poisonCount = 1;
-    bool weapons;
+    
 
     public void UpdateTiles() //This fuction gets called the frame the player ARRIVES at a new tile
     {
@@ -62,13 +61,22 @@ public class TileDetect : MonoBehaviour
         //Weapons Tile
 
         if(currentTile.CompareTag("Weapons"))
-            weapons = true;
+            effectsAndItems.weapon = true;
 
         //Enemy Tile
-        if(currentTile.CompareTag("Enemy") && !weapons)
+        if(currentTile.CompareTag("Enemy"))
         {
-            print("dead by enemy");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (!effectsAndItems.weapon)
+            {
+                print("dead by enemy");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                
+            }
+            else
+            {
+                effectsAndItems.weapon = false;
+            }
+           
         }
         
         //Finish Tile
@@ -80,10 +88,44 @@ public class TileDetect : MonoBehaviour
         //Ice Tile
         if(currentTile.CompareTag("Ice"))
         {
+            if (effectsAndItems.wet && !effectsAndItems.frost)
+            {
+                effectsAndItems.frost = true;
+                effectsAndItems.frostCount = 3;
+            }
             mov.MoveDir(currentTile.transform.position - prevTile.transform.position);
             mov.sliding = true; //this bool makes sure that the tiles keep updating when sliding over ice
         }
         else mov.sliding = false;
+
+        //Water Tile
+        if (currentTile.CompareTag("Water"))
+        {
+            effectsAndItems.wet = true;
+            effectsAndItems.wetCount = 3;
+            effectsAndItems.gunpowder = false;
+            if (effectsAndItems.electricity)
+            {
+                print("dead by electrocution");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+        //Fire Tile
+        if (currentTile.CompareTag("Fire"))
+        {
+            effectsAndItems.wet = false;
+            effectsAndItems.frost = false;
+            if (effectsAndItems.gunpowder)
+            {
+                print("dead by explosion");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+        //Electricity Tile
+        if (currentTile.CompareTag("Electricity"))
+        {
+            effectsAndItems.electricity = true;
+        }
     }
 
     public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
@@ -91,21 +133,43 @@ public class TileDetect : MonoBehaviour
         //Antidote Tile
         if(currentTile.CompareTag("Antidote"))
         {
-            poisoned = false;
+            effectsAndItems.poison = false;
+        }
+
+        //Frost counter countdown
+        if (effectsAndItems.frost)
+        {
+            effectsAndItems.frostCount -= 1;
+        }
+        if (effectsAndItems.frostCount <= 0)
+        {
+            print("dead by cold");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        //Wet counter countdown
+        if (effectsAndItems.wet)
+        {
+            effectsAndItems.wetCount -= 1;
+        }
+        if (effectsAndItems.wetCount <= 0)
+        {
+            effectsAndItems.wet = false;
+            effectsAndItems.wetCount = 1;
         }
 
         //Poison Tile
-        if(poisoned)
+        if (effectsAndItems.poison)
         {
-            poisonCount -= 1;
+            effectsAndItems.poisonCount -= 1;
         }
 
-        if(currentTile.CompareTag("Poison") && !poisoned)
+        if(currentTile.CompareTag("Poison") && !effectsAndItems.poison)
         {
-            poisoned = true;
-            poisonCount = 3; // amount of tiles you can travel before dying
+            effectsAndItems.poison = true;
+            effectsAndItems.poisonCount = 3; // amount of tiles you can travel before dying
         }
-        if(poisonCount <= 0)
+        if(effectsAndItems.poisonCount <= 0)
         {
             print("dead by poison");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

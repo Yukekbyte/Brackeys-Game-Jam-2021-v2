@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 9056762941074815881}
   - component: {fileID: 9056762941074815880}
   - component: {fileID: 9056762941074815607}
+  - component: {fileID: -4401118416380691150}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -148,6 +149,7 @@ MonoBehaviour:
   goright: 1
   goup: 1
   godown: 1
+  sliding: 0
 --- !u!114 &9056762941074815607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +163,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mov: {fileID: 9056762941074815880}
+  effectsAndItems: {fileID: -4401118416380691150}
+--- !u!114 &-4401118416380691150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056762941074815606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b05c11c620338f4eb6045bf5d06b38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wet: 0
+  weapon: 0
+  poison: 0
+  poisonCount: 1
+  frost: 0
