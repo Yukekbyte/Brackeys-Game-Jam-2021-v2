@@ -48,7 +48,6 @@ public class TileDetect : MonoBehaviour
             upTile = upTileArray[0];
         if (downTileArray.Length > 0)
             downTile = downTileArray[0];
-        print("prev: " + prevTile.tag + "   cur: " + currentTile.tag);
 
         //Check the edges and restrict movement if needed
         if(leftTileArray.Length == 0)
