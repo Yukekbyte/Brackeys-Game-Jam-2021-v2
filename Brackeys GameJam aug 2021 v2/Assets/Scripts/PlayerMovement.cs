@@ -53,13 +53,13 @@ public class PlayerMovement : MonoBehaviour
             //Vertical input
             else if(Input.GetKeyDown(KeyCode.W) && goup)
             {
-                movePoint.position += new Vector3(0f, 1f, 0f);
+                movePoint.position += new Vector3(0f, 0f, 1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
             }
             else if(Input.GetKeyDown(KeyCode.S) && godown)
             {
-                movePoint.position += new Vector3(0f, -1f, 0f);
+                movePoint.position += new Vector3(0f, 0f, -1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
             }

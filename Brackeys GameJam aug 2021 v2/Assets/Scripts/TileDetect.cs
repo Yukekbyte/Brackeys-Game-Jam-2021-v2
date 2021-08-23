@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TileDetect : MonoBehaviour
 {
-    Collider2D currentTile;
-    Collider2D leftTile;
-    Collider2D rightTile;
-    Collider2D upTile;
-    Collider2D downTile;
-    Collider2D prevTile;
+    Collider currentTile;
+    Collider leftTile;
+    Collider rightTile;
+    Collider upTile;
+    Collider downTile;
+    Collider prevTile;
     public PlayerMovement mov;
 
     //specific tile related variables
@@ -27,28 +27,40 @@ public class TileDetect : MonoBehaviour
         mov.godown = true;
 
     
-        //Detect adjecent tiles + previoustile
-
+        // Detects adjecent tiles and puts them into an array (array of one if there is a tile, empty array if not)
         prevTile = currentTile;
-        currentTile = Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y));// Current point
-        leftTile = Physics2D.OverlapPoint(new Vector2(transform.position.x - 1, transform.position.y));// Left point
-        rightTile = Physics2D.OverlapPoint(new Vector2(transform.position.x + 1, transform.position.y));// Right point
-        upTile = Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + 1));// Up point
-        downTile = Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y - 1));// Down point
+        Collider[] currentTileArray = Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y - 1.2f, transform.position.z), 0.1f); // Current cube
+        Collider[] leftTileArray = Physics.OverlapSphere(new Vector3(transform.position.x - 1f, transform.position.y - 1f, transform.position.z), 0.1f); // Left cube
+        Collider[] rightTileArray = Physics.OverlapSphere(new Vector3(transform.position.x + 1f, transform.position.y - 1f, transform.position.z), 0.1f); // Right cube
+        Collider[] upTileArray = Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z + 1f), 0.1f); // Up cube
+        Collider[] downTileArray = Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z - 1f), 0.1f); // Down cube
 
+        //if there is a tile in the spot, store it in an object
 
-        //Check the walls and restrict movement if needed
+        currentTile = currentTileArray[0];
+        if (leftTileArray.Length > 0)
+            leftTile = leftTileArray[0];
+        if (rightTileArray.Length > 0)
+            rightTile = rightTileArray[0];
+        if (upTileArray.Length > 0)
+            upTile = upTileArray[0];
+        if (downTileArray.Length > 0)
+            downTile = downTileArray[0];
 
-        if(leftTile.CompareTag("Wall"))
+        //Check the edges and restrict movement if needed
+        if(leftTileArray.Length == 0)
             mov.goleft = false;
-        if(rightTile.CompareTag("Wall"))
+        if(rightTileArray.Length == 0)
             mov.goright = false;
-        if(upTile.CompareTag("Wall"))
+        if(upTileArray.Length == 0)
             mov.goup = false;
-        if(downTile.CompareTag("Wall"))
+        if(downTileArray.Length == 0)
             mov.godown = false;
 
+        //Weapons Tile
 
+        if(currentTile.CompareTag("Weapons"))
+            weapons = true;
 
         //Enemy Tile
         if(currentTile.CompareTag("Enemy") && !weapons)
@@ -78,8 +90,8 @@ public class TileDetect : MonoBehaviour
         if(poisoned)
         {
             poisonCount -= 1;
-            print(poisonCount);
         }
+
         if(currentTile.CompareTag("Poison") && !poisoned)
         {
             poisoned = true;
