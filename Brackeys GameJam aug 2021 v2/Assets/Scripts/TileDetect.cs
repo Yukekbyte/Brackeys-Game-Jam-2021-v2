@@ -18,7 +18,6 @@ public class TileDetect : MonoBehaviour
     int poisonCount = 1;
     bool weapons;
 
-    //hello world
     public void UpdateTiles() //This fuction gets called the frame the player ARRIVES at a new tile
     {
         //Reset movement restrictions
@@ -91,6 +90,5 @@ public class TileDetect : MonoBehaviour
             print("dead by poison");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        // test comment
     }
 }
