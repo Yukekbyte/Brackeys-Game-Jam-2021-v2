@@ -91,7 +91,8 @@ public class TileDetect : MonoBehaviour
             if (effectsAndItems.wet && !effectsAndItems.frost)
             {
                 effectsAndItems.frost = true;
-                effectsAndItems.frostCount = 3;
+                effectsAndItems.wet = false;
+                effectsAndItems.frostCount = 4;
             }
             mov.MoveDir(currentTile.transform.position - prevTile.transform.position);
             mov.sliding = true; //this bool makes sure that the tiles keep updating when sliding over ice
@@ -102,7 +103,7 @@ public class TileDetect : MonoBehaviour
         if (currentTile.CompareTag("Water"))
         {
             effectsAndItems.wet = true;
-            effectsAndItems.wetCount = 3;
+            effectsAndItems.wetCount = 4;
             effectsAndItems.gunpowder = false;
             if (effectsAndItems.electricity)
             {
@@ -125,6 +126,12 @@ public class TileDetect : MonoBehaviour
         if (currentTile.CompareTag("Electricity"))
         {
             effectsAndItems.electricity = true;
+        }
+        //Poison Tile
+        if (currentTile.CompareTag("Poison") && !effectsAndItems.poison)
+        {
+            effectsAndItems.poison = true;
+            effectsAndItems.poisonCount = 4; // amount of tiles you can travel before dying
         }
     }
 
@@ -164,11 +171,7 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.poisonCount -= 1;
         }
 
-        if(currentTile.CompareTag("Poison") && !effectsAndItems.poison)
-        {
-            effectsAndItems.poison = true;
-            effectsAndItems.poisonCount = 3; // amount of tiles you can travel before dying
-        }
+        
         if(effectsAndItems.poisonCount <= 0)
         {
             print("dead by poison");

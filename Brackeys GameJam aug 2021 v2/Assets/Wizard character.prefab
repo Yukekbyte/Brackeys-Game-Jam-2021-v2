@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b05c11c620338f4eb6045bf5d06b38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  List: {fileID: 0}
   wet: 0
   weapon: 0
   poison: 0
@@ -158,6 +159,12 @@ MonoBehaviour:
   frost: 0
   gunpowder: 0
   electricity: 0
+  EffectsList: 
+  FrostIcon: <sprite=0>
+  GunpowderIcon: <sprite=1>
+  PoisonIcon: <sprite=3>
+  ElectricityIcon: <sprite=2>
+  WetIcon: <sprite=4>
 --- !u!1 &2962499583063771830
 GameObject:
   m_ObjectHideFlags: 0
