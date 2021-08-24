@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Transform movePoint;
-    public TileDetect tileDetect;
+    TileDetect tileDetect;
+    Animator animator;
     public float speed;
     bool tilesUpdated = false;
     
@@ -20,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     //Tiledetect related
     public bool sliding;
 
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+        tileDetect = GetComponent<TileDetect>();
+    }
     void Start()
     {
         movePoint.parent = null;
@@ -47,12 +53,14 @@ public class PlayerMovement : MonoBehaviour
                 movePoint.position += new Vector3(-1f, 0f, 0f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
+                animator.SetTrigger("Walktrigger");
             }
             else if(Input.GetKeyDown(KeyCode.D) && goright)
             {
                 movePoint.position += new Vector3(1f, 0f, 0f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
+                animator.SetTrigger("Walktrigger");
             }
 
             //Vertical input
@@ -61,12 +69,14 @@ public class PlayerMovement : MonoBehaviour
                 movePoint.position += new Vector3(0f, 0f, 1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
+                animator.SetTrigger("Walktrigger");
             }
             else if(Input.GetKeyDown(KeyCode.S) && godown)
             {
                 movePoint.position += new Vector3(0f, 0f, -1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
+                animator.SetTrigger("Walktrigger");
             }
         }
     }
@@ -74,5 +84,6 @@ public class PlayerMovement : MonoBehaviour
     public void MoveDir(Vector3 dir)
     {
         movePoint.position += dir;
+        animator.SetTrigger("Walktrigger");
     }
 }

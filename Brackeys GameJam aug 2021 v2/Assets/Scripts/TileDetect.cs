@@ -11,12 +11,16 @@ public class TileDetect : MonoBehaviour
     Collider upTile;
     Collider downTile;
     Collider prevTile;
-    public PlayerMovement mov;
-    public EffectsAndItems effectsAndItems;
+    PlayerMovement mov;
+    EffectsAndItems effectsAndItems;
 
     //specific tile related variables
     
-
+    void Awake()
+    {
+        mov = GetComponent<PlayerMovement>();
+        effectsAndItems = GetComponent<EffectsAndItems>();
+    }
     public void UpdateTiles() //This fuction gets called the frame the player ARRIVES at a new tile
     {
         //Reset movement restrictions
@@ -28,7 +32,7 @@ public class TileDetect : MonoBehaviour
     
         // Detects adjecent tiles and puts them into an array (array of one if there is a tile, empty array if not)
         prevTile = currentTile;
-        Collider[] currentTileArray = Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y - 1.2f, transform.position.z), 0.1f); // Current cube
+        Collider[] currentTileArray = Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z), 0.1f); // Current cube
         Collider[] leftTileArray = Physics.OverlapSphere(new Vector3(transform.position.x - 1f, transform.position.y - 1f, transform.position.z), 0.1f); // Left cube
         Collider[] rightTileArray = Physics.OverlapSphere(new Vector3(transform.position.x + 1f, transform.position.y - 1f, transform.position.z), 0.1f); // Right cube
         Collider[] upTileArray = Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z + 1f), 0.1f); // Up cube
