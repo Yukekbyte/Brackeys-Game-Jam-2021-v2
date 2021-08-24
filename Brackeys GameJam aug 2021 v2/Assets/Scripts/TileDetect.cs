@@ -144,15 +144,16 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.poison = true;
             effectsAndItems.poisonCount = 4; // amount of tiles you can travel before dying
         }
-    }
-
-    public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
-    {
         //Antidote Tile
         if(currentTile.CompareTag("Antidote"))
         {
             effectsAndItems.poison = false;
         }
+    }
+
+    public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
+    {
+        
 
         //Frost counter countdown
         if (effectsAndItems.frost)
