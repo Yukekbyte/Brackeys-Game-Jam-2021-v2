@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: d4cd717fc42bf51469d5deb173917e80
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6463324774932726917
+    second: Icon Pallet_0
+  - first:
+      213: -586585892759225143
+    second: Icon Pallet_1
+  - first:
+      213: 1824873593785778130
+    second: Icon Pallet_2
+  - first:
+      213: -9075822174088374518
+    second: Icon Pallet_3
+  - first:
+      213: -2840123887927551410
+    second: Icon Pallet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +116,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Icon Pallet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 648
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b37228c58ad46a0800000000000000
+      internalID: -6463324774932726917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Pallet_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 644
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccb4d70d370cd7f0800000000000000
+      internalID: -586585892759225143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Pallet_2
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 642
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df779d6dd0435910800000000000000
+      internalID: 1824873593785778130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Pallet_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 644
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0759d481d33c0280800000000000000
+      internalID: -9075822174088374518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Pallet_4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 642
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a1afd1f5ad598d0800000000000000
+      internalID: -2840123887927551410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 261564c466424294b9076c6c8b68d73c
     internalID: 0
     vertices: []
     indices: 
