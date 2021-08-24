@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 6571090700335460882}
   - component: {fileID: 6571090700335460881}
   m_Layer: 0
-  m_Name: Wizard char
+  m_Name: Player Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePoint: {fileID: 6336668015434014675}
-  speed: 0.7
+  speed: 2
   goleft: 1
   goright: 1
   goup: 1
