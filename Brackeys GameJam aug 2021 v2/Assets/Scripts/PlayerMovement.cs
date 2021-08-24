@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             //Horizontal input
             if(Input.GetKeyDown(KeyCode.A) && goleft)
             {
+                //transform.rotation = 
                 movePoint.position += new Vector3(-1f, 0f, 0f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
