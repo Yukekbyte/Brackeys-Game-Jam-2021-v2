@@ -14,6 +14,7 @@ public class EffectsAndItems : MonoBehaviour
     public bool frost;
     public bool gunpowder;
     public bool electricity;
+    public string[] EffectList;
     // Start is called before the first frame update
     void Start()
     {
