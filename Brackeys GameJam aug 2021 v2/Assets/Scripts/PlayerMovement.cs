@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     public float speed;
     bool tilesUpdated = false;
-    
 
     //Movement bools
     public bool goleft = true;
@@ -50,14 +49,15 @@ public class PlayerMovement : MonoBehaviour
             //Horizontal input
             if(Input.GetKeyDown(KeyCode.A) && goleft)
             {
-                //transform.rotation = 
-                movePoint.position += new Vector3(-1f, 0f, 0f);
-                tilesUpdated = false;
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, -90, transform.eulerAngles.z); //Rotation of character
+                movePoint.position += new Vector3(-1f, 0f, 0f);     //Moves the movepoint (not the character)
+                tilesUpdated = false;                               //so it doesn't keep updating the tiles until the character arrives at a new tile
                 tileDetect.UpdateWhenInput();
-                animator.SetTrigger("Walktrigger");
+                animator.SetTrigger("Walktrigger");                 //start walk animation
             }
             else if(Input.GetKeyDown(KeyCode.D) && goright)
             {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 90, transform.eulerAngles.z);
                 movePoint.position += new Vector3(1f, 0f, 0f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
@@ -67,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
             //Vertical input
             else if(Input.GetKeyDown(KeyCode.W) && goup)
             {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 movePoint.position += new Vector3(0f, 0f, 1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
@@ -74,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if(Input.GetKeyDown(KeyCode.S) && godown)
             {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
                 movePoint.position += new Vector3(0f, 0f, -1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
