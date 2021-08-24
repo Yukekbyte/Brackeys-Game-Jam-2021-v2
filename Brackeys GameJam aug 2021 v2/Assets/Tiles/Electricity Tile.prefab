@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &809366562924548654
+--- !u!1 &1435836837636808235
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 809366562924548650}
-  - component: {fileID: 809366562924548649}
-  - component: {fileID: 809366562924548648}
-  - component: {fileID: 809366562924548655}
+  - component: {fileID: 1776332861766583441}
+  - component: {fileID: 3389265237629487924}
+  - component: {fileID: 643418326624419838}
+  - component: {fileID: 3789868050199587506}
   m_Layer: 0
-  m_Name: Fire Tile
-  m_TagString: Fire
+  m_Name: Electricity Tile
+  m_TagString: Electricity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &809366562924548650
+--- !u!4 &1776332861766583441
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809366562924548654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1435836837636808235}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &809366562924548649
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &3389265237629487924
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809366562924548654}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &809366562924548648
+  m_GameObject: {fileID: 1435836837636808235}
+  m_Mesh: {fileID: -7718234319992975089, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+--- !u!23 &643418326624419838
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809366562924548654}
+  m_GameObject: {fileID: 1435836837636808235}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,7 +60,14 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41f90361580e9f74f816351de24908df, type: 2}
+  - {fileID: -3646164147556029967, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+  - {fileID: 2614538834425847185, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+  - {fileID: 9211767346597979706, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+  - {fileID: 4177638493353285962, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+  - {fileID: -629291537597448134, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+  - {fileID: -5845205985939444110, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+  - {fileID: 1263768037805008798, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
+  - {fileID: 4561627309056528737, guid: 863bf72b52cbea14eb07f6740a4d220a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,16 +89,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &809366562924548655
+--- !u!65 &3789868050199587506
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809366562924548654}
+  m_GameObject: {fileID: 1435836837636808235}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.010000229, y: 0.01, z: 0.010041221}
+  m_Center: {x: -0.000000029206275, y: -4.87046e-20, z: 0.000020613074}
