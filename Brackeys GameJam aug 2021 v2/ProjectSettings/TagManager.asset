@@ -14,6 +14,7 @@ TagManager:
   - Electricity
   - Water
   - Fire
+  - Gunpowder
   layers:
   - Default
   - TransparentFX

@@ -18,12 +18,14 @@ public class EffectsAndItems : MonoBehaviour
     public bool frost;
     private bool _frost;
     public bool gunpowder;
+    private bool _gunpowder;
     public bool electricity;
+    private bool _electricity;
     public string EffectsList;
     public string FrostIcon = "<sprite=0>";
     public string GunpowderIcon = "<sprite=1>";
     public string PoisonIcon = "<sprite=3>";
-    public string ElectricityIcon = "<sprite=3>";
+    public string ElectricityIcon = "<sprite=2>";
     public string WetIcon = "<sprite=4>";
     // Start is called before the first frame update
     void Start()
@@ -38,18 +40,20 @@ public class EffectsAndItems : MonoBehaviour
         _frost = false;
         _poison = false;
         _wet = false;
+        _electricity = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         List.text = EffectsList;
         // changing the text
         if(frost != _frost)
         {
             if (frost)
             {
-                EffectsList = EffectsList + FrostIcon;
+                EffectsList += FrostIcon;
             }
             if (!frost)
             {
@@ -62,7 +66,7 @@ public class EffectsAndItems : MonoBehaviour
         {
             if (wet)
             {
-                EffectsList = EffectsList + WetIcon;
+                EffectsList += WetIcon;
             }
             if (!wet)
             {
@@ -73,18 +77,50 @@ public class EffectsAndItems : MonoBehaviour
 
         if (poison != _poison)
         {
-            print("1");
+            
             if (poison)
             {
-                print(PoisonIcon);
-                EffectsList += FrostIcon;
+                
+                EffectsList += PoisonIcon;
             }
             if (!poison)
             {
-                print("3");
+                
                 EffectsList = EffectsList.Replace(PoisonIcon, "");
             }
             _poison = poison;
+        }
+
+        if (electricity != _electricity)
+        {
+
+            if (electricity)
+            {
+
+                EffectsList += ElectricityIcon;
+            }
+            if (!electricity)
+            {
+
+                EffectsList = EffectsList.Replace(ElectricityIcon, "");
+            }
+            _electricity = electricity;
+        }
+
+        if (gunpowder != _gunpowder)
+        {
+
+            if (gunpowder)
+            {
+
+                EffectsList += GunpowderIcon;
+            }
+            if (!gunpowder)
+            {
+
+                EffectsList = EffectsList.Replace(GunpowderIcon, "");
+            }
+            _gunpowder = gunpowder;
         }
     }
     

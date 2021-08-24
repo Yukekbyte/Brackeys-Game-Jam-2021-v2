@@ -92,6 +92,7 @@ public class TileDetect : MonoBehaviour
         //Ice Tile
         if(currentTile.CompareTag("Ice"))
         {
+            
             if (effectsAndItems.wet && !effectsAndItems.frost)
             {
                 effectsAndItems.frost = true;
@@ -106,6 +107,7 @@ public class TileDetect : MonoBehaviour
         //Water Tile
         if (currentTile.CompareTag("Water"))
         {
+            
             effectsAndItems.wet = true;
             effectsAndItems.wetCount = 4;
             effectsAndItems.gunpowder = false;
@@ -125,6 +127,11 @@ public class TileDetect : MonoBehaviour
                 print("dead by explosion");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
+        }
+        //Gunpowder Tile
+        if (currentTile.CompareTag("Gunpowder"))
+        {
+            effectsAndItems.gunpowder = true;
         }
         //Electricity Tile
         if (currentTile.CompareTag("Electricity"))
