@@ -113,4 +113,8 @@ public class PlayerMovement : MonoBehaviour
             print("3");
         }
     }
+    public void Fall()
+    {
+        movePoint.position += new Vector3(0f, -20f, 0f);
+    }
 }
