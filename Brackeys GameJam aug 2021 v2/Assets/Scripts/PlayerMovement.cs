@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform movePoint;
     TileDetect tileDetect;
     Animator animator;
+    AudioManager audioManager;
     public float speed;
     bool tilesUpdated = false;
 
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         animator = GetComponent<Animator>();
         tileDetect = GetComponent<TileDetect>();
     }
@@ -54,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;                               //so it doesn't keep updating the tiles until the character arrives at a new tile
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");                 //start walk animation
+                audioManager.Play("Step");
             }
             else if((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && goright)
             {
@@ -62,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
+                audioManager.Play("Step");
             }
 
             //Vertical input
@@ -72,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
+                audioManager.Play("Step");
             }
             else if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && godown)
             {
@@ -80,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
+                audioManager.Play("Step");
             }
         }
     }
