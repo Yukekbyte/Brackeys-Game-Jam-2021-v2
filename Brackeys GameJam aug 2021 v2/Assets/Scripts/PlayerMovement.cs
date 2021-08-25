@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Horizontal input
-            if(Input.GetKeyDown(KeyCode.A) && goleft)
+            if((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && goleft)
             {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, -90, transform.eulerAngles.z); //Rotation of character
                 movePoint.position += new Vector3(-1f, 0f, 0f);     //Moves the movepoint (not the character)
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");                 //start walk animation
             }
-            else if(Input.GetKeyDown(KeyCode.D) && goright)
+            else if((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && goright)
             {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, 90, transform.eulerAngles.z);
                 movePoint.position += new Vector3(1f, 0f, 0f);
@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Vertical input
-            else if(Input.GetKeyDown(KeyCode.W) && goup)
+            else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && goup)
             {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 movePoint.position += new Vector3(0f, 0f, 1f);
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
             }
-            else if(Input.GetKeyDown(KeyCode.S) && godown)
+            else if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && godown)
             {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
                 movePoint.position += new Vector3(0f, 0f, -1f);
