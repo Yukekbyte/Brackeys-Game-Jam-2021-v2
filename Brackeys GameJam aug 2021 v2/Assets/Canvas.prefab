@@ -1257,7 +1257,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Watch out! this tile is so slippery you will slide to the next tile ahead
     (if there is one hopefully). Also when wet you wil get the frost effect. After
-    3 moves you will die.
+    3 moves you will freeze to death!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
