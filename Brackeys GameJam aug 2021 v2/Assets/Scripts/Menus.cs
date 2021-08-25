@@ -70,21 +70,29 @@ public class Menus : MonoBehaviour
     }
     public void BackButton()
     {
-        //enable the title and tile buttons and disable the backbutton, reverse of TileButton()
-        title.enabled = true;
-        tileButtons.SetActive(true);
-        backButton.enabled = false;
+        if (tileButtons.activeSelf)
+        {
+            TilesMenu.SetActive(false);
+        }
+        else
+        {
+            //enable the title and tile buttons and disable the backbutton, reverse of TileButton()
+            title.enabled = true;
+            tileButtons.SetActive(true);
+            
 
-        //also disable all texts (slight spaghetti)
-        grassText.SetActive(false);
-        waterText.SetActive(false);
-        fireText.SetActive(false);
-        iceText.SetActive(false);
-        gunpowderText.SetActive(false);
-        weaponsText.SetActive(false);
-        enemyText.SetActive(false);
-        poisonText.SetActive(false);
-        antidoteText.SetActive(false);
+            //also disable all texts (slight spaghetti)
+            grassText.SetActive(false);
+            waterText.SetActive(false);
+            fireText.SetActive(false);
+            iceText.SetActive(false);
+            gunpowderText.SetActive(false);
+            weaponsText.SetActive(false);
+            enemyText.SetActive(false);
+            poisonText.SetActive(false);
+            antidoteText.SetActive(false);
+        }
+        
     }
     public void GrassButton()
     {
