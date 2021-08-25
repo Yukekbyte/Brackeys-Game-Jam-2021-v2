@@ -15,6 +15,7 @@ TagManager:
   - Water
   - Fire
   - Gunpowder
+  - Cannon
   layers:
   - Default
   - TransparentFX
