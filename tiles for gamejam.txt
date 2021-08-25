@@ -12,6 +12,9 @@ gunpowder: explode when campfire
 campfire: dries you up and warms you
 electricity: electricity buff
 
+plant: if wet debuff plant grows and spreads to neighbor grass blocks
+bomb: disappears with gunpowder when you step off the tile
+
 
 optional:
 
