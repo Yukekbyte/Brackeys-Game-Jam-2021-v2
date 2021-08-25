@@ -662,7 +662,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7661482321620204368}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: WaterButton
+        m_MethodName: WeaponsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1801,7 +1801,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7661482321620204368}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: WaterButton
+        m_MethodName: FireButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2143,7 +2143,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7661482321620204368}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: WaterButton
+        m_MethodName: IceButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4439,7 +4439,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7661482321620204368}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: WaterButton
+        m_MethodName: EnemyButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4858,7 +4858,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7661482321620204368}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: WaterButton
+        m_MethodName: AntidoteButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5257,6 +5257,13 @@ MonoBehaviour:
   title: {fileID: 3310584171736005233}
   grassText: {fileID: 5035670080018392617}
   waterText: {fileID: 494604728719202084}
+  fireText: {fileID: 2915973966848246821}
+  iceText: {fileID: 2684789103473091959}
+  gunpowderText: {fileID: 2160535295516757420}
+  weaponsText: {fileID: 8397861718028579343}
+  enemyText: {fileID: 685991138032370096}
+  poisonText: {fileID: 8102740709178887414}
+  antidoteText: {fileID: 7681902623234465319}
 --- !u!1 &6024100000582631996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5322,7 +5329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When stepped upon this tile, you will get wet <insert water icon>
+  m_text: When stepped upon this tile, you will get wet <sprite=1>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5341,7 +5348,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 953a28b9c93df554dbdb98e683386d17, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -5589,7 +5596,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7661482321620204368}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: WaterButton
+        m_MethodName: PoisonButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6492,7 +6499,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7661482321620204368}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: WaterButton
+        m_MethodName: GunpowderButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

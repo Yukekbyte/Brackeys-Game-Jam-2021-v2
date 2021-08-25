@@ -16,6 +16,14 @@ public class Menus : MonoBehaviour
     public TextMeshProUGUI title;
     public GameObject grassText;
     public GameObject waterText;
+    public GameObject fireText;
+    public GameObject iceText;
+    public GameObject gunpowderText;
+    public GameObject weaponsText;
+    public GameObject enemyText;
+    public GameObject poisonText;
+    public GameObject antidoteText;
+
     
     void Awake()
     {
@@ -40,6 +48,13 @@ public class Menus : MonoBehaviour
             //all tile info text false
             grassText.SetActive(false);
             waterText.SetActive(false);
+            fireText.SetActive(false);
+            iceText.SetActive(false);
+            gunpowderText.SetActive(false);
+            weaponsText.SetActive(false);
+            enemyText.SetActive(false);
+            poisonText.SetActive(false);
+            antidoteText.SetActive(false);
         }
     }
     public void Preview()
@@ -63,6 +78,13 @@ public class Menus : MonoBehaviour
         //also disable all texts (slight spaghetti)
         grassText.SetActive(false);
         waterText.SetActive(false);
+        fireText.SetActive(false);
+        iceText.SetActive(false);
+        gunpowderText.SetActive(false);
+        weaponsText.SetActive(false);
+        enemyText.SetActive(false);
+        poisonText.SetActive(false);
+        antidoteText.SetActive(false);
     }
     public void GrassButton()
     {
@@ -74,5 +96,39 @@ public class Menus : MonoBehaviour
         waterText.SetActive(true);
         TileButton();
     }
-
+    public void FireButton()
+    {
+        fireText.SetActive(true);
+        TileButton();
+    }
+    public void IceButton()
+    {
+        iceText.SetActive(true);
+        TileButton();
+    }
+    public void GunpowderButton()
+    {
+        gunpowderText.SetActive(true);
+        TileButton();
+    }
+    public void WeaponsButton()
+    {
+        weaponsText.SetActive(true);
+        TileButton();
+    }
+    public void EnemyButton()
+    {
+        enemyText.SetActive(true);
+        TileButton();
+    }
+    public void PoisonButton()
+    {
+        poisonText.SetActive(true);
+        TileButton();
+    }
+    public void AntidoteButton()
+    {
+        antidoteText.SetActive(true);
+        TileButton();
+    }
 }
