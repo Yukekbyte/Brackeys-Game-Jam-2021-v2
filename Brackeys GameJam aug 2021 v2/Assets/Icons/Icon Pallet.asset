@@ -72,11 +72,11 @@ MonoBehaviour:
   m_SpriteGlyphTable:
   - m_Index: 0
     m_Metrics:
-      m_Width: 116
-      m_Height: 116
-      m_HorizontalBearingX: -58
-      m_HorizontalBearingY: 58
-      m_HorizontalAdvance: 116
+      m_Width: 100
+      m_Height: 100
+      m_HorizontalBearingX: 10
+      m_HorizontalBearingY: 93.3
+      m_HorizontalAdvance: 75
     m_GlyphRect:
       m_X: 4
       m_Y: 648
@@ -87,11 +87,11 @@ MonoBehaviour:
     sprite: {fileID: -6463324774932726917, guid: d4cd717fc42bf51469d5deb173917e80, type: 3}
   - m_Index: 1
     m_Metrics:
-      m_Width: 116
-      m_Height: 116
-      m_HorizontalBearingX: -58
-      m_HorizontalBearingY: 58
-      m_HorizontalAdvance: 116
+      m_Width: 100
+      m_Height: 100
+      m_HorizontalBearingX: 10
+      m_HorizontalBearingY: 93
+      m_HorizontalAdvance: 75
     m_GlyphRect:
       m_X: 134
       m_Y: 644
@@ -102,11 +102,11 @@ MonoBehaviour:
     sprite: {fileID: -586585892759225143, guid: d4cd717fc42bf51469d5deb173917e80, type: 3}
   - m_Index: 2
     m_Metrics:
-      m_Width: 116
-      m_Height: 116
-      m_HorizontalBearingX: -58
-      m_HorizontalBearingY: 58
-      m_HorizontalAdvance: 116
+      m_Width: 100
+      m_Height: 100
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 90
+      m_HorizontalAdvance: 75
     m_GlyphRect:
       m_X: 390
       m_Y: 644
@@ -117,11 +117,11 @@ MonoBehaviour:
     sprite: {fileID: -9075822174088374518, guid: d4cd717fc42bf51469d5deb173917e80, type: 3}
   - m_Index: 3
     m_Metrics:
-      m_Width: 116
-      m_Height: 116
-      m_HorizontalBearingX: -58
-      m_HorizontalBearingY: 58
-      m_HorizontalAdvance: 116
+      m_Width: 100
+      m_Height: 100
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 93
+      m_HorizontalAdvance: 75
     m_GlyphRect:
       m_X: 262
       m_Y: 642
@@ -132,11 +132,11 @@ MonoBehaviour:
     sprite: {fileID: 1824873593785778130, guid: d4cd717fc42bf51469d5deb173917e80, type: 3}
   - m_Index: 4
     m_Metrics:
-      m_Width: 116
-      m_Height: 116
-      m_HorizontalBearingX: -58
-      m_HorizontalBearingY: 58
-      m_HorizontalAdvance: 116
+      m_Width: 100
+      m_Height: 100
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 93
+      m_HorizontalAdvance: 75
     m_GlyphRect:
       m_X: 516
       m_Y: 642
