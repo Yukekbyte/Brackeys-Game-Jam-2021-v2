@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform movePoint;
     TileDetect tileDetect;
     Animator animator;
+    AudioManager audioManager;
     public float speed;
     bool tilesUpdated = false;
 
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         animator = GetComponent<Animator>();
         tileDetect = GetComponent<TileDetect>();
     }
@@ -54,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;                               //so it doesn't keep updating the tiles until the character arrives at a new tile
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");                 //start walk animation
+                PlayStep();
             }
             else if((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && goright)
             {
@@ -62,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
+                PlayStep();
             }
 
             //Vertical input
@@ -72,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
+                PlayStep();
             }
             else if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && godown)
             {
@@ -80,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
+                PlayStep();
             }
         }
     }
@@ -87,5 +93,28 @@ public class PlayerMovement : MonoBehaviour
     public void MoveDir(Vector3 dir)
     {
         movePoint.position += dir;
+    }
+    void PlayStep()
+    {
+        float a = Random.Range(-1,2);
+        if(a < 0)
+        {
+            audioManager.Play("Step");
+            print("1");
+        }
+        else if (a < 1)
+        {
+            audioManager.Play("Step2");
+            print("2");
+        }
+        else
+        {
+            audioManager.Play("Step3");
+            print("3");
+        }
+    }
+    public void Fall()
+    {
+        movePoint.position += new Vector3(0f, -20f, 0f);
     }
 }

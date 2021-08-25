@@ -42,7 +42,11 @@ public class TileDetect : MonoBehaviour
         if(currentTileArray.Length > 0)
             currentTile = currentTileArray[0];
         else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            {
+                mov.speed = 10;
+                mov.Fall();
+                Invoke("Respawn", 1.5f);
+            }
         if (leftTileArray.Length > 0)
             leftTile = leftTileArray[0];
         if (rightTileArray.Length > 0)
@@ -114,7 +118,7 @@ public class TileDetect : MonoBehaviour
             if (effectsAndItems.electricity)
             {
                 print("dead by electrocution");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Respawn();
             }
         }
         //Fire Tile
@@ -125,7 +129,7 @@ public class TileDetect : MonoBehaviour
             if (effectsAndItems.gunpowder)
             {
                 print("dead by explosion");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Respawn();
             }
         }
         //Gunpowder Tile
@@ -163,7 +167,7 @@ public class TileDetect : MonoBehaviour
         if (effectsAndItems.frostCount <= 0)
         {
             print("dead by cold");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Respawn();
         }
 
         //Wet counter countdown
@@ -187,7 +191,12 @@ public class TileDetect : MonoBehaviour
         if(effectsAndItems.poisonCount <= 0)
         {
             print("dead by poison");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Respawn();
         }
+    }
+
+    void Respawn()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
