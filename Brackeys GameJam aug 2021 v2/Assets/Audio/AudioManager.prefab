@@ -51,9 +51,21 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Step
-    clip: {fileID: 8300000, guid: 892d26fe1295403409f3fd7d057c061c, type: 3}
+    clip: {fileID: 8300000, guid: 58cc04e3b79392f41bdc4aa092300e0f, type: 3}
     volume: 0.402
-    pitch: 1
+    pitch: 1.4
+    loop: 0
+    source: {fileID: 0}
+  - name: Step2
+    clip: {fileID: 8300000, guid: 58cc04e3b79392f41bdc4aa092300e0f, type: 3}
+    volume: 0.402
+    pitch: 1.4
+    loop: 0
+    source: {fileID: 0}
+  - name: Step3
+    clip: {fileID: 8300000, guid: 58cc04e3b79392f41bdc4aa092300e0f, type: 3}
+    volume: 0.402
+    pitch: 1.4
     loop: 0
     source: {fileID: 0}
   soundOn: 1

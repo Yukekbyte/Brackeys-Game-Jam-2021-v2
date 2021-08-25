@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;                               //so it doesn't keep updating the tiles until the character arrives at a new tile
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");                 //start walk animation
-                audioManager.Play("Step");
+                PlayStep();
             }
             else if((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && goright)
             {
@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
-                audioManager.Play("Step");
+                PlayStep();
             }
 
             //Vertical input
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
-                audioManager.Play("Step");
+                PlayStep();
             }
             else if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && godown)
             {
@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
                 animator.SetTrigger("Walktrigger");
-                audioManager.Play("Step");
+                PlayStep();
             }
         }
     }
@@ -93,5 +93,24 @@ public class PlayerMovement : MonoBehaviour
     public void MoveDir(Vector3 dir)
     {
         movePoint.position += dir;
+    }
+    void PlayStep()
+    {
+        float a = Random.Range(-1,2);
+        if(a < 0)
+        {
+            audioManager.Play("Step");
+            print("1");
+        }
+        else if (a < 1)
+        {
+            audioManager.Play("Step2");
+            print("2");
+        }
+        else
+        {
+            audioManager.Play("Step3");
+            print("3");
+        }
     }
 }
