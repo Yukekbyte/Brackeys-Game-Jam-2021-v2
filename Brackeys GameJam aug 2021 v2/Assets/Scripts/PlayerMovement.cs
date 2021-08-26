@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             if(tilesUpdated == false)
             {
                 tileDetect.UpdateTiles();
+                print("updating");
                 if(!sliding)
                     tilesUpdated = true;
             }
@@ -117,5 +118,9 @@ public class PlayerMovement : MonoBehaviour
     public void Fall()
     {
         movePoint.position += new Vector3(0f, -20f, 0f);
+    }
+    public void TilesUpdatedToFalse()
+    {
+        tilesUpdated = false;
     }
 }

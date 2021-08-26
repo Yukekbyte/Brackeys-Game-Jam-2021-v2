@@ -182,6 +182,7 @@ public class TileDetect : MonoBehaviour
         {
             mov.MoveDir(currentTile.gameObject.transform.GetChild(0).position - currentTile.transform.position);
             effectsAndItems.gunpowder = false;
+            mov.Invoke("TilesUpdatedToFalse",0.4f);
         }
     }
 
