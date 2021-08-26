@@ -7,17 +7,13 @@ ice: slide further (cold/frost effect?)
 poison: poison debuff (dies after 3 tiles)
 antidote: defeats poison
 water: wet debuff
-cannon: use when gunpowder
+cannon: use when gunpowder, shoots you 2 tiles further
 gunpowder: explode when campfire
 campfire: dries you up and warms you
 electricity: electricity buff
 
-plant: if wet debuff plant grows and spreads to neighbor grass blocks
+plant: if wet effect, plant "grows" and makes neighbors grass blocks
 bomb: disappears with gunpowder when you step off the tile
-shock
+cloud: same as bomb without gunpowder
 
-
-optional:
-
-monkey
-nuclear waste
+colored button and tiles that when stepped upon button tile (with electricity) the colored tiles become visible/usable

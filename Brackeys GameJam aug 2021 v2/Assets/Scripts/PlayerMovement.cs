@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
                 movePoint.position += new Vector3(-1f, 0f, 0f);     //Moves the movepoint (not the character)
                 tilesUpdated = false;                               //so it doesn't keep updating the tiles until the character arrives at a new tile
                 tileDetect.UpdateWhenInput();
+                tileDetect.prevTileDir = "right";                   //this updates the direction the current tile (now previous because we will move) is after we have moved
                 animator.SetTrigger("Walktrigger");                 //start walk animation
                 PlayStep();
             }
@@ -64,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 movePoint.position += new Vector3(1f, 0f, 0f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
+                tileDetect.prevTileDir = "left";
                 animator.SetTrigger("Walktrigger");
                 PlayStep();
             }
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
                 movePoint.position += new Vector3(0f, 0f, 1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
+                tileDetect.prevTileDir = "down";
                 animator.SetTrigger("Walktrigger");
                 PlayStep();
             }
@@ -84,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
                 movePoint.position += new Vector3(0f, 0f, -1f);
                 tilesUpdated = false;
                 tileDetect.UpdateWhenInput();
+                tileDetect.prevTileDir = "up";
                 animator.SetTrigger("Walktrigger");
                 PlayStep();
             }
@@ -100,17 +104,14 @@ public class PlayerMovement : MonoBehaviour
         if(a < 0)
         {
             audioManager.Play("Step");
-            print("1");
         }
         else if (a < 1)
         {
             audioManager.Play("Step2");
-            print("2");
         }
         else
         {
             audioManager.Play("Step3");
-            print("3");
         }
     }
     public void Fall()

@@ -11,6 +11,7 @@ public class TileDetect : MonoBehaviour
     Collider upTile;
     Collider downTile;
     Collider prevTile;
+    public string prevTileDir; //this will store the direction the previous tile is from the player: left / up / right / down
     PlayerMovement mov;
     EffectsAndItems effectsAndItems;
 
@@ -152,6 +153,31 @@ public class TileDetect : MonoBehaviour
         if(currentTile.CompareTag("Antidote"))
         {
             effectsAndItems.poison = false;
+        }
+        //Timebomb Tile
+        print(prevTile.tag);
+        if(prevTile.CompareTag("Timebomb") && effectsAndItems.gunpowder)
+        {
+            //make sure the player can't walk back on the cloud
+            if(prevTileDir == "left")   mov.goleft = false;
+            if(prevTileDir == "right")  mov.goright = false;
+            if(prevTileDir == "up")     mov.goup = false;
+            else                        mov.godown = false;
+            //destroy cloud
+            Destroy(prevTile.gameObject);
+            effectsAndItems.gunpowder = false;
+        }
+
+        //Cloud Tile
+        if(prevTile.CompareTag("Cloud"))
+        {
+            //make sure the player can't walk back on the cloud
+            if(prevTileDir == "left")   mov.goleft = false;
+            if(prevTileDir == "right")  mov.goright = false;
+            if(prevTileDir == "up")     mov.goup = false;
+            else                        mov.godown = false;
+            //destroy cloud
+            Destroy(prevTile.gameObject);
         }
     }
 

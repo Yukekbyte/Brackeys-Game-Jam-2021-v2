@@ -16,6 +16,9 @@ TagManager:
   - Fire
   - Gunpowder
   - Cannon
+  - Cloud
+  - Timebomb
+  - Moving
   layers:
   - Default
   - TransparentFX
