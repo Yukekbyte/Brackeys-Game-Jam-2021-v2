@@ -19,6 +19,7 @@ TagManager:
   - Cloud
   - Timebomb
   - Moving
+  - Flower
   layers:
   - Default
   - TransparentFX
