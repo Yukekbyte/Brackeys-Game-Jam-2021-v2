@@ -49,7 +49,7 @@ public class Menus : MonoBehaviour
     public void Won()
     {
         Winscreen.SetActive(true);
-        Score.text = "Score: " + Player.GetComponent<TileDetect>().moves;
+        Score.text = "Moves: " + Player.GetComponent<TileDetect>().moves;
     }
     public void NextLevel()
     {
