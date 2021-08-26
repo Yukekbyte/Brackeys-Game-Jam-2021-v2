@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 643418326624419838}
   - component: {fileID: 3789868050199587506}
   m_Layer: 0
-  m_Name: Electricity Tile
+  m_Name: Zapper Tile
   m_TagString: Electricity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,5 +100,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.010000229, y: 0.01, z: 0.010041221}
-  m_Center: {x: -0.000000029206275, y: -4.87046e-20, z: 0.000020613074}
+  m_Size: {x: 0.01, y: 0.0100000035, z: 0.010000003}
+  m_Center: {x: 0, y: 0, z: 0}
