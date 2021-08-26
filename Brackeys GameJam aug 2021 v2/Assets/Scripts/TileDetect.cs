@@ -15,6 +15,7 @@ public class TileDetect : MonoBehaviour
     PlayerMovement mov;
     EffectsAndItems effectsAndItems;
     GameObject Canvas;
+    public int moves;
 
     //specific tile related variables
     
@@ -23,9 +24,11 @@ public class TileDetect : MonoBehaviour
         mov = GetComponent<PlayerMovement>();
         effectsAndItems = GetComponent<EffectsAndItems>();
         Canvas = GameObject.Find("Canvas");
+        moves = 0;
     }
     public void UpdateTiles() //This fuction gets called the frame the player ARRIVES at a new tile
     {
+        
         //Reset movement restrictions
         mov.goleft = true;
         mov.goright = true;
@@ -94,7 +97,7 @@ public class TileDetect : MonoBehaviour
         //Finish Tile
         if(currentTile.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Canvas.GetComponent<Menus>().Won();
         }
 
         //Ice Tile
@@ -192,8 +195,8 @@ public class TileDetect : MonoBehaviour
 
     public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
     {
-        
 
+        moves += 1;
         //Frost counter countdown
         if (effectsAndItems.frost)
         {

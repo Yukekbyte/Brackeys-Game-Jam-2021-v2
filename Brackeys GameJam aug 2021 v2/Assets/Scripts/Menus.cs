@@ -34,12 +34,26 @@ public class Menus : MonoBehaviour
     public GameObject FellDeath;
     public GameObject ElecDeath;
 
+    //inside winscreen
+    public GameObject Winscreen;
+    public TextMeshProUGUI Score;
+
     
     void Awake()
     {
         TilesMenu.SetActive(false);
         deathscreen.SetActive(false);
+        Winscreen.SetActive(false);
         Player = GameObject.Find("Wizard char");
+    }
+    public void Won()
+    {
+        Winscreen.SetActive(true);
+        Score.text = "Score: " + Player.GetComponent<TileDetect>().moves;
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Retry()
     {
