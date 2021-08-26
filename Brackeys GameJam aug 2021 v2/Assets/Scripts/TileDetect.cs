@@ -105,7 +105,7 @@ public class TileDetect : MonoBehaviour
                 effectsAndItems.frostCount = 4;
             }
             mov.MoveDir(currentTile.transform.position - prevTile.transform.position);
-            mov.sliding = true; //this bool makes sure that the tiles keep updating when sliding over ice
+            mov.sliding = true;
         }
         else mov.sliding = false;
 
@@ -155,7 +155,6 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.poison = false;
         }
         //Timebomb Tile
-        print(prevTile.tag);
         if(prevTile.CompareTag("Timebomb") && effectsAndItems.gunpowder)
         {
             //make sure the player can't walk back on the cloud
@@ -178,6 +177,11 @@ public class TileDetect : MonoBehaviour
             else                        mov.godown = false;
             //destroy cloud
             Destroy(prevTile.gameObject);
+        }
+        if(currentTile.CompareTag("Cannon") && effectsAndItems.gunpowder)
+        {
+            mov.MoveDir(currentTile.gameObject.transform.GetChild(0).position - currentTile.transform.position);
+            effectsAndItems.gunpowder = false;
         }
     }
 

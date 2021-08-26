@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             if(tilesUpdated == false)
             {
                 tileDetect.UpdateTiles();
-                if(!sliding) //when over ice, the tiles keep updating until the ice sliding is over
+                if(!sliding)
                     tilesUpdated = true;
             }
 
