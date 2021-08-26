@@ -8,9 +8,10 @@ using TMPro;
 public class Menus : MonoBehaviour
 {
     public GameObject TilesMenu;
-    
+    GameObject Player;
 
     // Inside encyclopedia
+
     public GameObject tileButtons;
     public Button backButton;
     public TextMeshProUGUI title;
@@ -24,10 +25,40 @@ public class Menus : MonoBehaviour
     public GameObject poisonText;
     public GameObject antidoteText;
 
+    //inside deathscreen
+    public GameObject deathscreen;
+    public GameObject ExplosionDeath;
+    public GameObject PoisonDeath;
+    public GameObject FrostDeath;
+    public GameObject EnemieDeath;
+    public GameObject FellDeath;
+    public GameObject ElecDeath;
+
     
     void Awake()
     {
         TilesMenu.SetActive(false);
+        deathscreen.SetActive(false);
+        Player = GameObject.Find("Wizard char");
+    }
+    public void Retry()
+    {
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void DisableDeathText()
+    {
+        Player.GetComponent<PlayerMovement>().godown = false;
+        Player.GetComponent<PlayerMovement>().goup = false;
+        Player.GetComponent<PlayerMovement>().goleft = false;
+        Player.GetComponent<PlayerMovement>().goright = false;
+        deathscreen.SetActive(true);
+        ExplosionDeath.SetActive(false);
+        PoisonDeath.SetActive(false);
+        FrostDeath.SetActive(false);
+        EnemieDeath.SetActive(false);
+        FellDeath.SetActive(false);
+        ElecDeath.SetActive(false);
     }
     public void Restart()
     {

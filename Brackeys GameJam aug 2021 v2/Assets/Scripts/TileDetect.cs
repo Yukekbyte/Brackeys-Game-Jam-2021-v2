@@ -14,6 +14,7 @@ public class TileDetect : MonoBehaviour
     public string prevTileDir; //this will store the direction the previous tile is from the player: left / up / right / down
     PlayerMovement mov;
     EffectsAndItems effectsAndItems;
+    GameObject Canvas;
 
     //specific tile related variables
     
@@ -21,6 +22,7 @@ public class TileDetect : MonoBehaviour
     {
         mov = GetComponent<PlayerMovement>();
         effectsAndItems = GetComponent<EffectsAndItems>();
+        Canvas = GameObject.Find("Canvas");
     }
     public void UpdateTiles() //This fuction gets called the frame the player ARRIVES at a new tile
     {
@@ -77,9 +79,10 @@ public class TileDetect : MonoBehaviour
         {
             if (!effectsAndItems.weapon)
             {
-                print("dead by enemy");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                
+                Canvas.GetComponent<Menus>().DisableDeathText();
+                Canvas.GetComponent<Menus>().EnemieDeath.SetActive(true);
+
+
             }
             else
             {
@@ -118,8 +121,8 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.gunpowder = false;
             if (effectsAndItems.electricity)
             {
-                print("dead by electrocution");
-                Respawn();
+                Canvas.GetComponent<Menus>().DisableDeathText();
+                Canvas.GetComponent<Menus>().ElecDeath.SetActive(true);
             }
         }
         //Fire Tile
@@ -129,8 +132,9 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.frost = false;
             if (effectsAndItems.gunpowder)
             {
-                print("dead by explosion");
-                Respawn();
+             
+                Canvas.GetComponent<Menus>().DisableDeathText();
+                Canvas.GetComponent<Menus>().ExplosionDeath.SetActive(true);
             }
         }
         //Gunpowder Tile
@@ -197,8 +201,8 @@ public class TileDetect : MonoBehaviour
         }
         if (effectsAndItems.frostCount <= 0)
         {
-            print("dead by cold");
-            Respawn();
+            Canvas.GetComponent<Menus>().DisableDeathText();
+            Canvas.GetComponent<Menus>().FrostDeath.SetActive(true);
         }
 
         //Wet counter countdown
@@ -221,13 +225,8 @@ public class TileDetect : MonoBehaviour
         
         if(effectsAndItems.poisonCount <= 0)
         {
-            print("dead by poison");
-            Respawn();
+            Canvas.GetComponent<Menus>().DisableDeathText();
+            Canvas.GetComponent<Menus>().PoisonDeath.SetActive(true);
         }
-    }
-
-    void Respawn()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
