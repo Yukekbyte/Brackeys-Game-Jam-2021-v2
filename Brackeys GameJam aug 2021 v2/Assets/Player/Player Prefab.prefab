@@ -924,6 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd1a3748f2258384a99515e637cef478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prevTileDir: 
 --- !u!114 &6571090700335460882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,7 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePoint: {fileID: 6336668015434014675}
-  speed: 2
+  speed: 5
   goleft: 1
   goright: 1
   goup: 1
