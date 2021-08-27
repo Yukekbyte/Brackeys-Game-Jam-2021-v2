@@ -9,6 +9,7 @@ public class Menus : MonoBehaviour
 {
     public GameObject TilesMenu;
     GameObject Player;
+    Camera cam;
 
     // Inside encyclopedia
     public GameObject tileButtons;
@@ -50,6 +51,7 @@ public class Menus : MonoBehaviour
     
     void Awake()
     {
+        cam = FindObjectOfType<Camera>();
         TilesMenu.SetActive(false);
         deathscreen.SetActive(false);
         Winscreen.SetActive(false);
@@ -124,7 +126,7 @@ public class Menus : MonoBehaviour
     }
     public void Preview()
     {
-
+        cam.previewing = !cam.previewing;    
     }
     void TileButton()   //things that always have to happen when a tile button is pressed (not specific to the tile button pressed in that instance)
     {
