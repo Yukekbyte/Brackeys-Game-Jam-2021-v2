@@ -111,7 +111,7 @@ public class TileDetect : MonoBehaviour
             {
                 effectsAndItems.frost = true;
                 effectsAndItems.wet = false;
-                effectsAndItems.frostCount = 4;
+                effectsAndItems.frostCount = 5;
             }
             mov.MoveDir(currentTile.transform.position - prevTile.transform.position);
             mov.sliding = true;
@@ -123,7 +123,6 @@ public class TileDetect : MonoBehaviour
         {
             
             effectsAndItems.wet = true;
-            effectsAndItems.wetCount = 4;
             effectsAndItems.gunpowder = false;
             if (effectsAndItems.electricity)
             {
@@ -158,7 +157,7 @@ public class TileDetect : MonoBehaviour
         if (currentTile.CompareTag("Poison") && !effectsAndItems.poison)
         {
             effectsAndItems.poison = true;
-            effectsAndItems.poisonCount = 4; // amount of tiles you can travel before dying
+            effectsAndItems.poisonCount = 5; // amount of tiles you can travel before dying
         }
         //Antidote Tile
         if(currentTile.CompareTag("Antidote"))
@@ -219,12 +218,6 @@ public class TileDetect : MonoBehaviour
         //Conveyor tile
         if(currentTile.CompareTag("Moving"))
         {
-            if (effectsAndItems.wet && !effectsAndItems.frost)
-            {
-                effectsAndItems.frost = true;
-                effectsAndItems.wet = false;
-                effectsAndItems.frostCount = 4;
-            }
             mov.MoveDir(currentTile.gameObject.transform.GetChild(0).position - currentTile.transform.position);
             mov.moving = true;
         }
@@ -258,17 +251,6 @@ public class TileDetect : MonoBehaviour
             audioManager.Play("Frost");
             Canvas.GetComponent<Menus>().DisableDeathText();
             Canvas.GetComponent<Menus>().FrostDeath.SetActive(true);
-        }
-
-        //Wet counter countdown
-        if (effectsAndItems.wet)
-        {
-            effectsAndItems.wetCount -= 1;
-        }
-        if (effectsAndItems.wetCount <= 0)
-        {
-            effectsAndItems.wet = false;
-            effectsAndItems.wetCount = 1;
         }
 
         //Poison Tile

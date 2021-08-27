@@ -14,7 +14,6 @@ public class EffectsAndItems : MonoBehaviour
     private bool _poison;
     public int poisonCount = 1;
     public int frostCount = 1;
-    public int wetCount = 1;
     public bool frost;
     private bool _frost;
     public bool gunpowder;
