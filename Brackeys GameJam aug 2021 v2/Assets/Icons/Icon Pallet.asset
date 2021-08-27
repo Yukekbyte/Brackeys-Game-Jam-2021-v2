@@ -69,6 +69,12 @@ MonoBehaviour:
     m_Scale: 1
     m_Name: Icon Pallet_4
     m_HashCode: 1478212448
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 5
+    m_Scale: 1
+    m_Name: Icon Pallet_5
+    m_HashCode: 1478212449
   m_SpriteGlyphTable:
   - m_Index: 0
     m_Metrics:
@@ -145,6 +151,21 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     sprite: {fileID: -2840123887927551410, guid: d4cd717fc42bf51469d5deb173917e80, type: 3}
+  - m_Index: 5
+    m_Metrics:
+      m_Width: 100
+      m_Height: 100
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 90
+      m_HorizontalAdvance: 75
+    m_GlyphRect:
+      m_X: 648
+      m_Y: 645
+      m_Width: 112
+      m_Height: 116
+    m_Scale: 1
+    m_AtlasIndex: 0
+    sprite: {fileID: -1600256475576621041, guid: d4cd717fc42bf51469d5deb173917e80, type: 3}
   spriteInfoList: []
   fallbackSpriteAssets: []
 --- !u!21 &6944055202643518153

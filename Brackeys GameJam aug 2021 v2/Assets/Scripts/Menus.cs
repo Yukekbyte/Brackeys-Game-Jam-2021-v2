@@ -10,6 +10,7 @@ public class Menus : MonoBehaviour
     public GameObject TilesMenu;
     GameObject Player;
     Camera cam;
+    public GameObject Previewmode;
 
     // Inside encyclopedia
     public GameObject tileButtons;
@@ -58,6 +59,7 @@ public class Menus : MonoBehaviour
         deathscreen.SetActive(false);
         Winscreen.SetActive(false);
         Player = GameObject.Find("Wizard char");
+        Previewmode.SetActive(false);
     }
     public void Won()
     {
@@ -135,6 +137,14 @@ public class Menus : MonoBehaviour
     }
     public void Preview()
     {
+        if (Previewmode.activeSelf)
+        {
+            Previewmode.SetActive(false);
+        }
+        else
+        {
+            Previewmode.SetActive(true);
+        }
         cam.previewing = !cam.previewing;    
     }
     void TileButton()   //things that always have to happen when a tile button is pressed (not specific to the tile button pressed in that instance)
