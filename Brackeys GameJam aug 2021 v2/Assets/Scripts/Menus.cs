@@ -99,7 +99,7 @@ public class Menus : MonoBehaviour
         {
             TilesMenu.SetActive(true);
 
-            backButton.enabled = false;
+            
 
             //all tile info text false
             grassText.SetActive(false);
