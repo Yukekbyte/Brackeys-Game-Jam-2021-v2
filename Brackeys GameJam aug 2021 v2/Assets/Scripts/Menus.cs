@@ -7,6 +7,7 @@ using TMPro;
 
 public class Menus : MonoBehaviour
 {
+    bool Death;
     public GameObject TilesMenu;
     GameObject Player;
     Camera cam;
@@ -63,8 +64,12 @@ public class Menus : MonoBehaviour
     }
     public void Won()
     {
-        Winscreen.SetActive(true);
-        Score.text = "Moves: " + Player.GetComponent<TileDetect>().moves;
+        if (!Death)
+        {
+            Winscreen.SetActive(true);
+            Score.text = "Moves: " + Player.GetComponent<TileDetect>().moves;
+        }
+        
     }
     public void NextLevel()
     {
@@ -79,10 +84,13 @@ public class Menus : MonoBehaviour
         audioManager.Stop("Enemy");
         audioManager.Stop("Falling");
         audioManager.Play("Theme");
+        Death = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
     public void DisableDeathText()
     {
+        Death = true;
         audioManager.Stop("Theme");
         Player.GetComponent<PlayerMovement>().godown = false;
         Player.GetComponent<PlayerMovement>().goup = false;
