@@ -229,14 +229,15 @@ public class TileDetect : MonoBehaviour
 
         //Button tile
 
-        if(currentTile.CompareTag("Button"))
+        if(currentTile.CompareTag("Button") && effectsAndItems.electricity)
         {
-            GameObject[] Triggers = GameObject.FindGameObjectsWithTag("Trigger");
+            GameObject[] triggers = GameObject.FindGameObjectsWithTag("Trigger");
 
-            for (int i = 0; i < Triggers.Length; i++)
+            foreach (GameObject trigger in triggers)
             {
-                //Triggers[i].
+                trigger.GetComponent<ButtonTrig>().TurnOn();
             }
+            effectsAndItems.electricity = false;
         }
     }
 

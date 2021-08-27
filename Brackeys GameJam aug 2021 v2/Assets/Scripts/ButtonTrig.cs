@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class ButtonTrig : MonoBehaviour
 {
-    bool on;
-
-    public void TurnOnOff()
+    void Awake()
     {
-        gameObject.GetComponent<Collider>().enabled = !on;
-        gameObject.GetComponent<MeshRenderer>().enabled = !on;
-        gameObject.GetComponentInChildren<MeshRenderer>().enabled = on;
-        on = !on;
+        gameObject.GetComponent<Collider>().enabled = false;
+        gameObject.GetComponentsInChildren<MeshRenderer>()[0].enabled = false;
+        gameObject.GetComponentsInChildren<MeshRenderer>()[1].enabled = true;
+    }
+
+    public void TurnOn()
+    {
+        gameObject.GetComponent<Collider>().enabled = true;
+        gameObject.GetComponentsInChildren<MeshRenderer>()[0].enabled = true;
+        gameObject.GetComponentsInChildren<MeshRenderer>()[1].enabled = false;
     }
 }
