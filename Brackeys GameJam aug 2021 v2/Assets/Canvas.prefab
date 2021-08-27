@@ -545,7 +545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7782666768028276160
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1156,7 +1156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5870757144344148064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3335,7 +3335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3834137603040321737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4380,7 +4380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2161091183688638909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5218,7 +5218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1861416793281900439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5916,7 +5916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6461884933967481886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5993,7 +5993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3849594981471534375
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6871,7 +6871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &819543104665700765
 Transform:
   m_ObjectHideFlags: 0
@@ -6908,7 +6908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8604598783474517511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7328,7 +7328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3457754895523833636
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7880,7 +7880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5431892630183034483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8373,7 +8373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4142265722277925732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9732,7 +9732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3046716816064064061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11179,7 +11179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4242693952961493294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11943,7 +11943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7326054684749975271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12203,8 +12203,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This tile equips you with a weapon! <sprite=weapon :)> Use it well to slay
-    your foes!
+  m_text: This tile equips you with a weapon! <sprite=5> Use it well to slay your
+    foes!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e56db3d345a2d9b409232d3fb1058496, type: 2}
   m_sharedMaterial: {fileID: -1021315554498792992, guid: e56db3d345a2d9b409232d3fb1058496, type: 2}
@@ -12270,7 +12270,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7903311625791952568
@@ -12633,7 +12633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5843915402468412329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12785,7 +12785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6929004172525585984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13045,7 +13045,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemies in sight! I hope you are well enough equiped to conquer them...
+  m_text: Enemies in sight! I hope you are well enough equiped <sprite=5> to conquer
+    them...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e56db3d345a2d9b409232d3fb1058496, type: 2}
   m_sharedMaterial: {fileID: -1021315554498792992, guid: e56db3d345a2d9b409232d3fb1058496, type: 2}
@@ -13111,7 +13112,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8284822739269951951
@@ -13131,7 +13132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3584972632883714497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13342,7 +13343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2826978459062540761
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13419,7 +13420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &903850701846303258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14235,7 +14236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6338151864476774554
 Transform:
   m_ObjectHideFlags: 0

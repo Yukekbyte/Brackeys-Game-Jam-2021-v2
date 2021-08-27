@@ -26,6 +26,7 @@ public class EffectsAndItems : MonoBehaviour
     public string PoisonIcon = "<sprite=3>";
     public string ElectricityIcon = "<sprite=2>";
     public string WetIcon = "<sprite=4>";
+    public string WeaponIcon = "<sprite=5>";
     // Start is called before the first frame update
     void Start()
     {
