@@ -116,9 +116,9 @@ public class Menus : MonoBehaviour
             timebombText.SetActive(false);
             zapText.SetActive(false);
             conveyerText.SetActive(false);
-            zapText.SetActive(false);
-            zapText.SetActive(false);
-            zapText.SetActive(false);
+            buttonText.SetActive(false);
+            activatableText.SetActive(false);
+            activatedText.SetActive(false);
 
         }
     }
@@ -156,6 +156,16 @@ public class Menus : MonoBehaviour
             enemyText.SetActive(false);
             poisonText.SetActive(false);
             antidoteText.SetActive(false);
+            cloudText.SetActive(false);
+            cannonText.SetActive(false);
+            finishText.SetActive(false);
+            flowerText.SetActive(false);
+            timebombText.SetActive(false);
+            zapText.SetActive(false);
+            conveyerText.SetActive(false);
+            buttonText.SetActive(false);
+            activatableText.SetActive(false);
+            activatedText.SetActive(false);
         }
         
     }
