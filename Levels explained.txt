@@ -1,0 +1,27 @@
+level
+
+1: recht gras pad, intro met controls
+2: intro water ice tiles
+3: denk level water ice tiles
+4: intro fire tile
+5: denk level water ice fire
+6: intro poison antidote
+7: denk level poison antidote 
+8: intro weapons enemy
+9: denk level weapons enemy
+10: intro cloud (veel clouds gebruike)
+11: denk level alles
+12: intro gunpowder (cannon + bomb)
+13: intro gunpoweder (water + fire)
+14: denk level
+15: intro flower
+16: denk level (rond flower)
+17: denk level (algemeen)
+18: electricity / button intro
+19: denk level 
+20: denk level
+21: denk level
+22: conveyor level
+23: denk level
+24: denk level
+25: denk level
