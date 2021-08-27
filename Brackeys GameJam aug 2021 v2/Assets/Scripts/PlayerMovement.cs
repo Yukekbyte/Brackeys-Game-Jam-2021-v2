@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Tiledetect related
     public bool sliding;
+    public bool moving;
 
     void Awake()
     {
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             if(tilesUpdated == false)
             {
                 tileDetect.UpdateTiles();
-                if(!sliding)
+                if(!sliding && !moving)
                     tilesUpdated = true;
             }
 

@@ -29,7 +29,6 @@ public class TileDetect : MonoBehaviour
     }
     public void UpdateTiles() //This fuction gets called the frame the player ARRIVES at a new tile
     {
-        
         //Reset movement restrictions
         mov.goleft = true;
         mov.goright = true;
@@ -223,9 +222,9 @@ public class TileDetect : MonoBehaviour
                 effectsAndItems.frostCount = 4;
             }
             mov.MoveDir(currentTile.gameObject.transform.GetChild(0).position - currentTile.transform.position);
-            mov.sliding = true;
+            mov.moving = true;
         }
-        else mov.sliding = false;
+        else mov.moving = false;
 
         //Button tile
 
