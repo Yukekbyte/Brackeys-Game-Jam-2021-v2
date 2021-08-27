@@ -1,12 +1,12 @@
 level
 
 1s: recht gras pad, intro met controls
-2l: intro water ice tiles
-3l: denk level water ice tiles
+2l*: intro water ice tiles
+3l*: denk level water ice tiles
 4s: intro fire tile
 5s: denk level water ice fire
 6l: intro poison antidote
-7l: denk level poison antidote 
+7l: denk level poison antidote (2 keer over poison lope, water ontwijke int begin om er opt einde te gerake)
 8s: intro weapons enemy
 9s: denk level weapons enemy
 10s: intro cloud (veel clouds gebruike) vlak van clouds en weapons heen en weer drage
