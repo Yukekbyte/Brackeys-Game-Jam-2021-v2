@@ -15,9 +15,9 @@ public class Camera : MonoBehaviour
             mov.enabled = false;
 
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-                transform.position += new Vector3(-0.03f,0f,0f);
+                transform.position += new Vector3(-10f * Time.deltaTime,0f,0f);
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-                transform.position += new Vector3(0.03f,0f,0f);
+                transform.position += new Vector3(10f * Time.deltaTime,0f,0f);
         }
         else
         {
