@@ -213,7 +213,7 @@ public class TileDetect : MonoBehaviour
             UpdateTiles();
         }
 
-        //Oonveyor tile
+        //Conveyor tile
         if(currentTile.CompareTag("Moving"))
         {
             if (effectsAndItems.wet && !effectsAndItems.frost)
@@ -227,6 +227,17 @@ public class TileDetect : MonoBehaviour
         }
         else mov.sliding = false;
 
+        //Button tile
+
+        if(currentTile.CompareTag("Button"))
+        {
+            GameObject[] Triggers = GameObject.FindGameObjectsWithTag("Trigger");
+
+            for (int i = 0; i < Triggers.Length; i++)
+            {
+                //Triggers[i].
+            }
+        }
     }
 
     public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move

@@ -20,6 +20,9 @@ TagManager:
   - Timebomb
   - Moving
   - Flower
+  - Button
+  - Undefined
+  - Trigger
   layers:
   - Default
   - TransparentFX
