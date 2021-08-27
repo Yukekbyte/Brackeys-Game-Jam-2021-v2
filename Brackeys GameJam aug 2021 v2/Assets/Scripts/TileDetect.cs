@@ -16,6 +16,7 @@ public class TileDetect : MonoBehaviour
     EffectsAndItems effectsAndItems;
     GameObject Canvas;
     public int moves;
+    public GameObject grassTile;
 
     //specific tile related variables
     
@@ -190,6 +191,25 @@ public class TileDetect : MonoBehaviour
             mov.MoveDir(currentTile.gameObject.transform.GetChild(0).position - currentTile.transform.position);
             effectsAndItems.gunpowder = false;
             mov.Invoke("TilesUpdatedToFalse",0.4f);
+        }
+
+        //Flower tile
+        if(currentTile.CompareTag("Flower") && effectsAndItems.wet)
+        {
+            print("yes");
+            //spawn new grass tiles on adjecent tiles
+            Instantiate(grassTile, new Vector3(currentTile.transform.position.x - 1, 0f, currentTile.transform.position.z), currentTile.transform.rotation);
+            Instantiate(grassTile, new Vector3(currentTile.transform.position.x + 1f, 0f, currentTile.transform.position.z), currentTile.transform.rotation);
+            Instantiate(grassTile, new Vector3(currentTile.transform.position.x, 0f, currentTile.transform.position.z + 1f), currentTile.transform.rotation);
+            Instantiate(grassTile, new Vector3(currentTile.transform.position.x, 0f, currentTile.transform.position.z - 1f), currentTile.transform.rotation);
+            //destroy other tiles if there are any
+            if(mov.goleft)  Destroy(leftTile.gameObject);
+            if(mov.goright) Destroy(rightTile.gameObject);
+            if(mov.goup)    Destroy(upTile.gameObject);
+            if(mov.godown)  Destroy(downTile.gameObject);
+            //wet effect gone and update tiles so the adjecent tiles are updated to be the grass tiles that were just created
+            effectsAndItems.wet = false;
+            UpdateTiles();
         }
     }
 

@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
             if(tilesUpdated == false)
             {
                 tileDetect.UpdateTiles();
-                print("updating");
                 if(!sliding)
                     tilesUpdated = true;
             }
