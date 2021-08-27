@@ -68,4 +68,40 @@ MonoBehaviour:
     pitch: 1.4
     loop: 0
     source: {fileID: 0}
+  - name: Poison
+    clip: {fileID: 8300000, guid: 59c54aa3700a9a84fabd5a09711a210c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy
+    clip: {fileID: 8300000, guid: 1e1b65ad694a64241bb29aa3cf1c020d, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gunpowder
+    clip: {fileID: 8300000, guid: 7d1969e52a7881542aca65a22ca97f71, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Electricity
+    clip: {fileID: 8300000, guid: 7f7f12f0e436cb9459e0934bdf0b7343, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Frost
+    clip: {fileID: 8300000, guid: fd07fd14fa6d6c74b917c7d03af1969c, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Falling
+    clip: {fileID: 8300000, guid: 5a055c44a28740641a7ca50502f81f5b, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   soundOn: 1

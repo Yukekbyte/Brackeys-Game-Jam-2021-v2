@@ -47,10 +47,12 @@ public class Menus : MonoBehaviour
     //inside winscreen
     public GameObject Winscreen;
     public TextMeshProUGUI Score;
+    AudioManager audioManager;
 
     
     void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         cam = FindObjectOfType<Camera>();
         TilesMenu.SetActive(false);
         deathscreen.SetActive(false);
@@ -68,11 +70,18 @@ public class Menus : MonoBehaviour
     }
     public void Retry()
     {
-        
+        audioManager.Stop("Frost");
+        audioManager.Stop("Electricity");
+        audioManager.Stop("Gunpowder");
+        audioManager.Stop("Poison");
+        audioManager.Stop("Enemy");
+        audioManager.Stop("Falling");
+        audioManager.Play("Theme");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void DisableDeathText()
     {
+        audioManager.Stop("Theme");
         Player.GetComponent<PlayerMovement>().godown = false;
         Player.GetComponent<PlayerMovement>().goup = false;
         Player.GetComponent<PlayerMovement>().goleft = false;
