@@ -186,6 +186,8 @@ public class TileDetect : MonoBehaviour
             //destroy cloud
             Destroy(prevTile.gameObject);
         }
+
+        //Cannon Tile
         if(currentTile.CompareTag("Cannon") && effectsAndItems.gunpowder)
         {
             mov.MoveDir(currentTile.gameObject.transform.GetChild(0).position - currentTile.transform.position);
@@ -196,7 +198,6 @@ public class TileDetect : MonoBehaviour
         //Flower tile
         if(currentTile.CompareTag("Flower") && effectsAndItems.wet)
         {
-            print("yes");
             //spawn new grass tiles on adjecent tiles
             Instantiate(grassTile, new Vector3(currentTile.transform.position.x - 1, 0f, currentTile.transform.position.z), currentTile.transform.rotation);
             Instantiate(grassTile, new Vector3(currentTile.transform.position.x + 1f, 0f, currentTile.transform.position.z), currentTile.transform.rotation);
@@ -211,6 +212,21 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.wet = false;
             UpdateTiles();
         }
+
+        //Oonveyor tile
+        if(currentTile.CompareTag("Moving"))
+        {
+            if (effectsAndItems.wet && !effectsAndItems.frost)
+            {
+                effectsAndItems.frost = true;
+                effectsAndItems.wet = false;
+                effectsAndItems.frostCount = 4;
+            }
+            mov.MoveDir(currentTile.gameObject.transform.GetChild(0).position - currentTile.transform.position);
+            mov.sliding = true;
+        }
+        else mov.sliding = false;
+
     }
 
     public void UpdateWhenInput() // This fucntion gets called the frame the player tries to move
