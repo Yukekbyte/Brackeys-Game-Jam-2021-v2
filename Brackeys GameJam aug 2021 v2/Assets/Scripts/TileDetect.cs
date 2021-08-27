@@ -17,11 +17,13 @@ public class TileDetect : MonoBehaviour
     GameObject Canvas;
     public int moves;
     public GameObject grassTile;
+    AudioManager audioManager;
 
     //specific tile related variables
     
     void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         mov = GetComponent<PlayerMovement>();
         effectsAndItems = GetComponent<EffectsAndItems>();
         Canvas = GameObject.Find("Canvas");
@@ -49,6 +51,7 @@ public class TileDetect : MonoBehaviour
             currentTile = currentTileArray[0];
         else
             {
+                audioManager.Play("Falling");
                 mov.speed = 10;
                 mov.Fall();
                 Invoke("Respawn", 1.5f);
@@ -82,10 +85,9 @@ public class TileDetect : MonoBehaviour
         {
             if (!effectsAndItems.weapon)
             {
+                audioManager.Play("Enemy");
                 Canvas.GetComponent<Menus>().DisableDeathText();
                 Canvas.GetComponent<Menus>().EnemieDeath.SetActive(true);
-
-
             }
             else
             {
@@ -124,6 +126,7 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.gunpowder = false;
             if (effectsAndItems.electricity)
             {
+                audioManager.Play("Electricity");
                 Canvas.GetComponent<Menus>().DisableDeathText();
                 Canvas.GetComponent<Menus>().ElecDeath.SetActive(true);
             }
@@ -135,7 +138,7 @@ public class TileDetect : MonoBehaviour
             effectsAndItems.frost = false;
             if (effectsAndItems.gunpowder)
             {
-             
+                audioManager.Play("Gunpowder");
                 Canvas.GetComponent<Menus>().DisableDeathText();
                 Canvas.GetComponent<Menus>().ExplosionDeath.SetActive(true);
             }
@@ -251,6 +254,7 @@ public class TileDetect : MonoBehaviour
         }
         if (effectsAndItems.frostCount <= 0)
         {
+            audioManager.Play("Frost");
             Canvas.GetComponent<Menus>().DisableDeathText();
             Canvas.GetComponent<Menus>().FrostDeath.SetActive(true);
         }
@@ -275,6 +279,7 @@ public class TileDetect : MonoBehaviour
         
         if(effectsAndItems.poisonCount <= 0)
         {
+            audioManager.Play("Poison");
             Canvas.GetComponent<Menus>().DisableDeathText();
             Canvas.GetComponent<Menus>().PoisonDeath.SetActive(true);
         }
