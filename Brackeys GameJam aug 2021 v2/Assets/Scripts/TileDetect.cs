@@ -92,7 +92,8 @@ public class TileDetect : MonoBehaviour
             else
             {
                 effectsAndItems.weapon = false;
-                Instantiate(grassTile, new Vector3(currentTile.transform.position, currentTile.transform.rotation);
+                Instantiate(grassTile, currentTile.transform.position, currentTile.transform.rotation);
+                Destroy(currentTile.gameObject);
             }
            
         }
@@ -188,7 +189,6 @@ public class TileDetect : MonoBehaviour
             //destroy cloud
             Destroy(prevTile.gameObject);
         }
-
         //Cannon Tile
         if(currentTile.CompareTag("Cannon") && effectsAndItems.gunpowder)
         {
