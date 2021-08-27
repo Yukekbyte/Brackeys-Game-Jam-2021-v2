@@ -92,6 +92,7 @@ public class TileDetect : MonoBehaviour
             else
             {
                 effectsAndItems.weapon = false;
+                Instantiate(grassTile, new Vector3(currentTile.transform.position, currentTile.transform.rotation);
             }
            
         }
