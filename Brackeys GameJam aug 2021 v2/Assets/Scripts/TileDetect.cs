@@ -268,4 +268,9 @@ public class TileDetect : MonoBehaviour
             Canvas.GetComponent<Menus>().PoisonDeath.SetActive(true);
         }
     }
+    void Respawn()
+    {
+        Canvas.GetComponent<Menus>().DisableDeathText();
+        Canvas.GetComponent<Menus>().FellDeath.SetActive(true);
+    }
 }

@@ -11,7 +11,6 @@ public class Menus : MonoBehaviour
     GameObject Player;
 
     // Inside encyclopedia
-
     public GameObject tileButtons;
     public Button backButton;
     public TextMeshProUGUI title;
@@ -24,6 +23,16 @@ public class Menus : MonoBehaviour
     public GameObject enemyText;
     public GameObject poisonText;
     public GameObject antidoteText;
+    public GameObject cloudText;
+    public GameObject cannonText;
+    public GameObject finishText;
+    public GameObject flowerText;
+    public GameObject timebombText;
+    public GameObject zapText;
+    public GameObject conveyerText;
+    public GameObject buttonText;
+    public GameObject activatableText;
+    public GameObject activatedText;
 
     //inside deathscreen
     public GameObject deathscreen;
@@ -100,6 +109,17 @@ public class Menus : MonoBehaviour
             enemyText.SetActive(false);
             poisonText.SetActive(false);
             antidoteText.SetActive(false);
+            cloudText.SetActive(false);
+            cannonText.SetActive(false);
+            finishText.SetActive(false);
+            flowerText.SetActive(false);
+            timebombText.SetActive(false);
+            zapText.SetActive(false);
+            conveyerText.SetActive(false);
+            zapText.SetActive(false);
+            zapText.SetActive(false);
+            zapText.SetActive(false);
+
         }
     }
     public void Preview()
@@ -182,6 +202,56 @@ public class Menus : MonoBehaviour
     public void AntidoteButton()
     {
         antidoteText.SetActive(true);
+        TileButton();
+    }
+    public void CloudButton()
+    {
+        cloudText.SetActive(true);
+        TileButton();
+    }
+    public void CannonButton()
+    {
+        cannonText.SetActive(true);
+        TileButton();
+    }
+    public void FinishButton()
+    {
+        finishText.SetActive(true);
+        TileButton();
+    }
+    public void FlowerButton()
+    {
+        flowerText.SetActive(true);
+        TileButton();
+    }
+    public void TimebombButton()
+    {
+        timebombText.SetActive(true);
+        TileButton();
+    }
+    public void ZapButton()
+    {
+        zapText.SetActive(true);
+        TileButton();
+    }
+    public void ConveyerButton()
+    {
+        conveyerText.SetActive(true);
+        TileButton();
+    }
+    public void ButtonButton()
+    {
+        buttonText.SetActive(true);
+        TileButton();
+    }
+    public void ActivatableButton()
+    {
+        activatableText.SetActive(true);
+        TileButton();
+    }
+    public void ActivatedButton()
+    {
+        activatedText.SetActive(true);
         TileButton();
     }
 }
