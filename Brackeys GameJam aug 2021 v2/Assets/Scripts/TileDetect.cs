@@ -48,14 +48,18 @@ public class TileDetect : MonoBehaviour
 
         //if there is a tile in the spot, store it in an object
         if(currentTileArray.Length > 0)
+        {
             currentTile = currentTileArray[0];
-        else
-            {
-                audioManager.Play("Falling");
-                mov.speed = 10;
-                mov.Fall();
-                Invoke("Respawn", 1.5f);
-            }
+            mov.falling = false;
+        }
+        else if(!mov.falling)
+        {
+            mov.falling = true;
+            audioManager.Play("Falling");
+            mov.speed = 10;
+            mov.Fall();
+            Invoke("Respawn", 1.5f);
+        }
         if (leftTileArray.Length > 0)
             leftTile = leftTileArray[0];
         if (rightTileArray.Length > 0)

@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     //Tiledetect related
     public bool sliding;
     public bool moving;
+    public bool falling;
 
     void Awake()
     {
@@ -118,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
     public void Fall()
     {
         movePoint.position += new Vector3(0f, -20f, 0f);
+        falling = true;
     }
     public void TilesUpdatedToFalse()
     {
