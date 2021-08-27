@@ -21,8 +21,8 @@ public class EffectsAndItems : MonoBehaviour
     public bool electricity;
     private bool _electricity;
     public string EffectsList;
-    public string FrostIcon = "<sprite=0>";
-    public string GunpowderIcon = "<sprite=1>";
+    public string FrostIcon = " <sprite=0> ";
+    public string GunpowderIcon = " <sprite=1> ";
     public string PoisonIcon = "<sprite=3>";
     public string ElectricityIcon = "<sprite=2>";
     public string WetIcon = "<sprite=4>";
