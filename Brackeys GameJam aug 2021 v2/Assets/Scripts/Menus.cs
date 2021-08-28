@@ -310,6 +310,7 @@ public class Menus : MonoBehaviour
     }
     public void BackToStart()
     {
+        Totalmoves = 0;
         audioManager.Play("Button");
         SceneManager.LoadScene("Start");
     }
