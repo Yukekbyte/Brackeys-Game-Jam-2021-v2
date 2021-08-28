@@ -66,6 +66,10 @@ public class Menus : MonoBehaviour
     {
         if (!Death)
         {
+            Player.GetComponent<PlayerMovement>().godown = false;
+            Player.GetComponent<PlayerMovement>().goup = false;
+            Player.GetComponent<PlayerMovement>().goleft = false;
+            Player.GetComponent<PlayerMovement>().goright = false;
             Winscreen.SetActive(true);
             Score.text = "Moves: " + Player.GetComponent<TileDetect>().moves;
         }
