@@ -104,4 +104,16 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: 38c50d2f9d917b540989b188fbc3fe3e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Finish
+    clip: {fileID: 8300000, guid: 178c8be2ad05757408a55c8026ddbf6c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   soundOn: 1

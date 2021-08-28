@@ -8,6 +8,7 @@ public class StartScript : MonoBehaviour
     // Start is called before the first frame update
     public void StartGame()
     {
+        FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
