@@ -67,6 +67,7 @@ public class Menus : MonoBehaviour
     {
         if (!Death)
         {
+            audioManager.Play("Finish");
             Player.GetComponent<PlayerMovement>().godown = false;
             Player.GetComponent<PlayerMovement>().goup = false;
             Player.GetComponent<PlayerMovement>().goleft = false;
@@ -74,16 +75,17 @@ public class Menus : MonoBehaviour
             Winscreen.SetActive(true);
             Score.text = "Moves: " + Player.GetComponent<TileDetect>().moves;
         }
-        
     }
     public void NextLevel()
     {
+        audioManager.Play("Button");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Player.GetComponent<TileDetect>().TotalMoves += Player.GetComponent<TileDetect>().moves;
         TotalMoves.text = "Total moves: " + Player.GetComponent<TileDetect>().TotalMoves;
     }
     public void Retry()
     {
+        audioManager.Play("Button");
         audioManager.Stop("Frost");
         audioManager.Stop("Electricity");
         audioManager.Stop("Gunpowder");
@@ -113,10 +115,12 @@ public class Menus : MonoBehaviour
     }
     public void Restart()
     {
+        audioManager.Play("Button");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void Encyclopedia()
     {
+        audioManager.Play("Button");
         if (TilesMenu.activeSelf)
         {
             TilesMenu.SetActive(false);
@@ -152,6 +156,7 @@ public class Menus : MonoBehaviour
     }
     public void Preview()
     {
+        audioManager.Play("Button");
         if (Previewmode.activeSelf)
         {
             Previewmode.SetActive(false);
@@ -164,6 +169,7 @@ public class Menus : MonoBehaviour
     }
     void TileButton()   //things that always have to happen when a tile button is pressed (not specific to the tile button pressed in that instance)
     {
+        audioManager.Play("Button");
         //disable the title and tile buttons and enable the back button
         title.enabled = false;
         tileButtons.SetActive(false);
@@ -171,6 +177,7 @@ public class Menus : MonoBehaviour
     }
     public void BackButton()
     {
+        audioManager.Play("Button");
         if (tileButtons.activeSelf)
         {
             TilesMenu.SetActive(false);
