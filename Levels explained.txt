@@ -12,7 +12,7 @@ level
 8s: intro weapons enemy
 9s: denk level weapons enemy
 10s: intro cloud (veel clouds gebruike) vlak van clouds en weapons heen en weer drage
-11l: denk level alles
+11l*: denk level alles
 12s: intro gunpowder (cannon + bomb)
 13s: intro gunpoweder (water + fire)
 14s: denk level
