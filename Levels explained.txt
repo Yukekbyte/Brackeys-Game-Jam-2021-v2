@@ -2,21 +2,21 @@ level
 
 * is gemaakt maar heeft playtesting nodig
 
-<done> 1s: recht gras pad, intro met controls
+1s: recht gras pad, intro met controls
 <done> 2l: intro water ice tiles
 <done> 3l: denk level water ice tiles
-4s*: intro fire tile
+4s: intro fire tile
 5s: denk level water ice fire
 <done> 6l: intro poison antidote
 7l*: denk level poison antidote
 8s: intro weapons enemy
 9s: denk level weapons enemy
 10s: intro cloud (veel clouds gebruike) vlak van clouds en weapons heen en weer drage
-11l: denk level alles
+11l*: denk level alles
 12s: intro gunpowder (cannon + bomb)
 13s: intro gunpoweder (water + fire)
 14s: denk level
-15l: intro flower
+15l*: intro flower
 16l: denk level (rond flower)
 17s: denk level (algemeen)
 18l: electricity / button intro
