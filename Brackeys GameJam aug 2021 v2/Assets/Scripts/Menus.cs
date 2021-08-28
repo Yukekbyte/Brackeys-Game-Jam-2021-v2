@@ -12,6 +12,7 @@ public class Menus : MonoBehaviour
     GameObject Player;
     Camera cam;
     public GameObject Previewmode;
+    public TextMeshProUGUI TotalMoves;
 
     // Inside encyclopedia
     public GameObject tileButtons;
@@ -78,6 +79,8 @@ public class Menus : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Player.GetComponent<TileDetect>().TotalMoves += Player.GetComponent<TileDetect>().moves;
+        TotalMoves.text = "Total moves: " + Player.GetComponent<TileDetect>().TotalMoves;
     }
     public void Retry()
     {
