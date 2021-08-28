@@ -16,7 +16,7 @@ public class TileDetect : MonoBehaviour
     EffectsAndItems effectsAndItems;
     GameObject Canvas;
     public int moves;
-    public int TotalMoves;
+    public static int TotalMoves;
     public GameObject grassTile;
     AudioManager audioManager;
 

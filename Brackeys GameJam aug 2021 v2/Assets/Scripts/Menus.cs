@@ -13,6 +13,7 @@ public class Menus : MonoBehaviour
     Camera cam;
     public GameObject Previewmode;
     public TextMeshProUGUI TotalMoves;
+    public static int Totalmoves;
 
     // Inside encyclopedia
     public GameObject tileButtons;
@@ -74,14 +75,14 @@ public class Menus : MonoBehaviour
             Player.GetComponent<PlayerMovement>().goright = false;
             Winscreen.SetActive(true);
             Score.text = "Moves: " + Player.GetComponent<TileDetect>().moves;
+            Totalmoves += Player.GetComponent<TileDetect>().moves;
+            TotalMoves.text = "Total moves: " + Totalmoves;
         }
     }
     public void NextLevel()
     {
         audioManager.Play("Button");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Player.GetComponent<TileDetect>().TotalMoves += Player.GetComponent<TileDetect>().moves;
-        TotalMoves.text = "Total moves: " + Player.GetComponent<TileDetect>().TotalMoves;
     }
     public void Retry()
     {
@@ -306,5 +307,10 @@ public class Menus : MonoBehaviour
     {
         activatedText.SetActive(true);
         TileButton();
+    }
+    public void BackToStart()
+    {
+        audioManager.Play("Button");
+        SceneManager.LoadScene("Start");
     }
 }
