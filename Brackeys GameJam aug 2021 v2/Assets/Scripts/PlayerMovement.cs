@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public bool sliding;
     public bool moving;
     public bool falling;
+    bool _moving;
+    bool _sliding;
 
     void Awake()
     {
@@ -36,6 +38,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (moving != _moving || sliding != _sliding)
+        {
+            if (!moving && !sliding)
+            {
+                tileDetect.UpdateTiles();
+            }
+            _moving = moving;
+            _sliding = sliding;
+        }
+
         //Player position follows movepoint position
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
 
