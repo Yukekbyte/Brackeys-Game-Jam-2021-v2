@@ -241,6 +241,7 @@ public class TileDetect : MonoBehaviour
                 trigger.GetComponent<ButtonTrig>().TurnOn();
             }
             effectsAndItems.electricity = false;
+            UpdateTiles();
         }
     }
 
