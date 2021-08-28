@@ -19,7 +19,7 @@ level
 15l*: intro flower
 16l*: denk level (rond flower)
 17s: denk level (algemeen)
-18l: electricity / button intro
+18l*: electricity / button intro
 20s/l: denk level
 19s: conveyor level
 
