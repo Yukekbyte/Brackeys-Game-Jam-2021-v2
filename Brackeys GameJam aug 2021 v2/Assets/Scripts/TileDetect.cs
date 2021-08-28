@@ -98,6 +98,7 @@ public class TileDetect : MonoBehaviour
                 effectsAndItems.weapon = false;
                 Instantiate(grassTile, currentTile.transform.position, currentTile.transform.rotation);
                 Destroy(currentTile.gameObject);
+                Invoke("UpdateTiles",0.1f);
             }
            
         }
