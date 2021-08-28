@@ -9,7 +9,7 @@ level
 5s: denk level water ice fire
 <done> 6l: intro poison antidote
 7l*: denk level poison antidote
-8s: intro weapons enemy
+8s*: intro weapons enemy
 9s: denk level weapons enemy
 10s: intro cloud (veel clouds gebruike) vlak van clouds en weapons heen en weer drage
 11l*: denk level alles
