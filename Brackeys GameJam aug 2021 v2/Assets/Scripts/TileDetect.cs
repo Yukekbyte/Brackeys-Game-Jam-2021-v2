@@ -189,7 +189,7 @@ public class TileDetect : MonoBehaviour
             if(prevTileDir == "left")   mov.goleft = false;
             if(prevTileDir == "right")  mov.goright = false;
             if(prevTileDir == "up")     mov.goup = false;
-            else                        mov.godown = false;
+            if(prevTileDir == "down")   mov.godown = false;
             //destroy cloud
             Destroy(prevTile.gameObject);
         }

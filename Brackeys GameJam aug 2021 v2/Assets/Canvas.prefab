@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Death by the enemie
+  m_text: Death by the enemy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e56db3d345a2d9b409232d3fb1058496, type: 2}
   m_sharedMaterial: {fileID: -1021315554498792992, guid: e56db3d345a2d9b409232d3fb1058496, type: 2}
