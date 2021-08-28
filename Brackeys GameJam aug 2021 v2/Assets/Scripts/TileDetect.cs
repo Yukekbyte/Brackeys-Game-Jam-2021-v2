@@ -264,7 +264,7 @@ public class TileDetect : MonoBehaviour
         }
 
         
-        if(effectsAndItems.poisonCount <= 0)
+        if(effectsAndItems.poisonCount <= 0 && effectsAndItems.frostCount > 0)
         {
             audioManager.Play("Poison");
             Canvas.GetComponent<Menus>().DisableDeathText();

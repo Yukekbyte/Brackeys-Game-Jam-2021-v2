@@ -10,6 +10,7 @@ public class EffectsAndItems : MonoBehaviour
     public bool wet;
     private bool _wet;
     public bool weapon;
+    public bool _weapon;
     public bool poison;
     private bool _poison;
     public int poisonCount = 1;
@@ -121,6 +122,21 @@ public class EffectsAndItems : MonoBehaviour
                 EffectsList = EffectsList.Replace(GunpowderIcon, "");
             }
             _gunpowder = gunpowder;
+        }
+        if (weapon != _weapon)
+        {
+
+            if (weapon)
+            {
+
+                EffectsList += WeaponIcon;
+            }
+            if (!weapon)
+            {
+
+                EffectsList = EffectsList.Replace(WeaponIcon, "");
+            }
+            _weapon = weapon;
         }
     }
     
