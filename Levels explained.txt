@@ -9,21 +9,17 @@ level
 5s: denk level water ice fire
 <done> 6l: intro poison antidote
 7l*: denk level poison antidote
-8s*: intro weapons enemy
-9s: denk level weapons enemy
-10s: intro cloud (veel clouds gebruike) vlak van clouds en weapons heen en weer drage
+8l*: intro weapons enemy
+9l*: denk level weapons enemy
+10s*: intro cloud (veel clouds gebruike) vlak van clouds en weapons heen en weer drage
 11l*: denk level alles
-12s: intro gunpowder (cannon + bomb)
+12s*: intro gunpowder (cannon + bomb)
 13s: intro gunpoweder (water + fire)
 14s: denk level
 15l*: intro flower
 16l*: denk level (rond flower)
 17s: denk level (algemeen)
 18l: electricity / button intro
-19: denk level
-20: denk level
-21: denk level
-22l: conveyor level
-23: denk level
-24: denk level
-25: denk level
+20s/l: denk level
+19s: conveyor level
+
