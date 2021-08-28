@@ -149,6 +149,18 @@ public class TileDetect : MonoBehaviour
                 Canvas.GetComponent<Menus>().ExplosionDeath.SetActive(true);
             }
         }
+        //Timebomb Tile
+        if(prevTile.CompareTag("Timebomb") && effectsAndItems.gunpowder)
+        {
+            //make sure the player can't walk back on the cloud
+            if(prevTileDir == "left")   mov.goleft = false;
+            if(prevTileDir == "right")  mov.goright = false;
+            if(prevTileDir == "up")     mov.goup = false;
+            if(prevTileDir == "down")     mov.godown = false;
+            //destroy cloud
+            Destroy(prevTile.gameObject);
+            effectsAndItems.gunpowder = false;
+        }
         //Gunpowder Tile
         if (currentTile.CompareTag("Gunpowder"))
         {
@@ -170,18 +182,7 @@ public class TileDetect : MonoBehaviour
         {
             effectsAndItems.poison = false;
         }
-        //Timebomb Tile
-        if(prevTile.CompareTag("Timebomb") && effectsAndItems.gunpowder)
-        {
-            //make sure the player can't walk back on the cloud
-            if(prevTileDir == "left")   mov.goleft = false;
-            if(prevTileDir == "right")  mov.goright = false;
-            if(prevTileDir == "up")     mov.goup = false;
-            if(prevTileDir == "down")     mov.godown = false;
-            //destroy cloud
-            Destroy(prevTile.gameObject);
-            effectsAndItems.gunpowder = false;
-        }
+        
 
         //Cloud Tile
         if(prevTile.CompareTag("Cloud"))
