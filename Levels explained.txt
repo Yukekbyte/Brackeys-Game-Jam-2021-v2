@@ -17,7 +17,7 @@ level
 13s: intro gunpoweder (water + fire)
 14s: denk level
 15l*: intro flower
-16l: denk level (rond flower)
+16l*: denk level (rond flower)
 17s: denk level (algemeen)
 18l: electricity / button intro
 19: denk level
